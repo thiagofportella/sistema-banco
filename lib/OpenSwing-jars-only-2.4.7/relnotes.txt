@@ -1,0 +1,2281 @@
+
+
+
+
+Release Notes 2.4.7
+-------------------
+
+Fixed problem in GridControl when using orderWithLoadData=true
+Fixed problem in GridControl when using GridController.getFont in insert/edit mode.
+
+
+Release Notes 2.4.6
+-------------------
+
+Fixed problem when using internal sorting in grids (orderWithLoadData=false). Now it works also with the filter panel.
+Fixed problem with grid profiles: now sorting conditions are correctly stored also after the first saving.
+Fixed problem with number fields/columns having decimals set: now they are correctly selected when ClientSettings.SELECT_DATA_IN_EDITABLE_GRID = true.
+Fixed problem when scrolling rows in grid and the selected row is the one on the bottom of the grid.
+Fixed problem with GridControl when setting a value in a combobox cell, without losing focus and changing column size using the mouse.
+Added setColumnsPosition method to LookupController, in order to define the position of the columns in the lookup grid.
+Added BUTTON_HEIGHT to ClientSettings, in order to customize the height of a GenericButton and its subclasses.
+Added GRID_COL_HEADER_BORDER to ClientSettings, in order to customize the border to use for column headers of a grid.
+Added new constructor to LoginDialog, in order to add an optional panel on the top of the dialog.
+Added getStatusPanel method to GridControl, in order to add custom labels to the bottom status panel of a grid.
+
+
+Release Notes 2.4.5
+-------------------
+
+Fixed problem on scrolling with UP/DOWN keys in a scrollable grid.
+
+
+
+Release Notes 2.4.4
+-------------------
+
+Fixed problem with SQLUtils.
+
+
+
+Release Notes 2.4.3
+-------------------
+
+Fixed problem on LookupController, when setting horizontal text alignment for header of a combo column.
+Fixed problem when saving a Form panel having a XXXSpinnerControler with focus in it.
+Fixed problem with PivotTable when applying multiple InputFilters to the same column.
+Fixed problem with grid profile, related to multiple filtering conditions to save.
+Changed a bit GenericButton event handling, so that now the click event is fired within the AWT event queue, instead of a simple Thread.
+Improved QueryUtil.getQuery in order to support stored functions call in select statement
+Improved translations reported in CzechOnlyResourceFactory class.
+Moved calling to ApplicationEventQueue at the MDIFrame creation.
+
+
+
+Release Notes 2.4.2
+-------------------
+
+Added PRESET_LAST_VALUE_IN_COMBO_XXX global property to ClientSettings, in order to preset the last selected item in combo column/control
+Changed Form panel: now beforeInsertRecord and beforeEditRecord are invoked one instead of twice, when pressing insert/edit button.
+Improved lookup usage in grid when using an ORM: now an object selected using a lookup is cloned when assigning it as an inner object of the object's row of the grid.
+Forced focus in lookup cell in grid, when LookupController.onInvalidCode property is to set  ON_INVALID_CODE_RESTORE_FOCUS.
+Improved TextControl: when text is longer than "columns" characters, the beginning part of text is displayed. Moreover, a non String value is accepted by setValue method.
+Fixed lookup bug when the whole value object is mapped to a grid's attribute.
+
+
+
+Release Notes 2.4.1
+-------------------
+
+Added setHeaderTextAlignment method to LookupController, in order to set the horizontal alignment of column header.
+Added another constructor to LabelControl, in order to directly specify the label's text.
+
+
+
+Release Notes 2.4
+-----------------
+
+Added "border" property to ButtonColumn, in order to customize button border.
+Fixed a bug in GridControl with CheckBoxColumn when this column is locked to the left of the grid.
+
+
+
+
+Release Notes 2.3.9
+-------------------
+
+Improved buttons panel on the bottom area of the MDIFrame: now windows numeration reuse free numbers.
+Improved FormController: added beforeSaveDataInEdit and beforeSaveDataInInsert callback methods, in order to interrupt saving operation.
+Improved GridController: added beforeSaveDataInEdit and beforeSaveDataInInsert callback methods, in order to interrupt saving operation.
+
+
+
+
+Release Notes 2.3.8
+-------------------
+
+Added "setColumnDynamicSettings" method to LookupController class, in order to format numeric values.
+Improved QueryUtil class, by providing:
+- other   "insertTable" methods, where it is possible to specify fields to insert without extracting values from the value object.
+- another "updateTable" method, where it is possible to specify fields to update and not compare.
+Improved GridControl component, by adding some utility methods:
+  - "collapseAllRows", to collapse all expanded rows, in case of grid having nested components.
+  - "addRowSelectionInterval" to select additional rows
+  - "removeRowSelectionInterval" to deselect rows
+  - "clearSelection" to remove all rows selection
+Changed attribute name selector in UI designer, in order to include Character type attribute too.
+Fixed translation in PolishOnlyResourceFactory class.
+Fixed problem in TextFormattedControl when using MaskFormatter.setValueContainsLiteralCharacters(false);
+Fixed problem with expandable grids, when using a combobox column as expandable column.
+
+
+
+Release Notes 2.3.7
+-------------------
+
+Improved grid: now it is possible to define a default filtering condition at column level, through "Column.setDefaultFilterValues" method,
+to apply when the grid is showed.
+Improved expandable grids: now it is possible to resize/repositioning columns also with expandable grids.
+Improved filter panel:
+- added translations to filter operators and sorting orders
+- added "NOT IN" filter condition
+Added GENERIC_BUTTON_FOCUSABLE global property to ClientSettings class, in order to define if GenericButton instances are focusable.
+Added Russian translations.
+Fixed problem with expandable grids, when moving from a block of data to another one.
+Fixed problem with expandable grids, when using combobox columns.
+Fixed filter button issue.
+
+
+
+Release Notes 2.3.6
+-------------------
+
+Final release 2.3.6 available
+Fixed exception on changing language in LoginDialog
+Fixed bean info descriptors of TreePanel and ImageControl components.
+
+
+
+Release Notes 2.3.5
+-------------------
+
+Final release 2.3.5 available
+Added stop progress bar button.
+Added "alwaysAvailableRequests" optional property to web.xml and used by Controller class, 
+in order to specify a list of request names that can be accessible event without login.
+Fixed some bean info properties, not correctly defined in BeanInfo.jar
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+
+Release Notes 2.3.4
+-------------------
+
+Final release 2.3.4 available
+Fixed problem with attribute editor property to use in UI designer and problem when analyzing inner objects in complex components.
+Changed center dialog policy: now OpenSwing components will show a warning/error dialog centered related to a JDialog first and to a JFrame secondly.
+Fixed polish translation.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+
+Release Notes 2.3.3
+-------------------
+
+Final release 2.3.3 available
+- Improved findNextValue method in GridControl: now it is possible to specify the matching criteria to use when searching for patterns.
+- Fixed some translations for Polish language.
+- Fixed problems on rendering top/bottom rows.
+- Fixed problem when pressing TAB key on lookup control and auto completion window is visible.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+
+Release Notes 2.3.2
+-------------------
+
+Final release 2.3.2 available
+- added new input control: FileControl, in order to upload/download files in Form panel
+- centered warning messages in grid, form and lookups in relation with its container and not the MDI frame
+- added findNextValue method to GridControl, in order to programmatically search for a specified value in a specified column with case insensitive criteria
+- improved Form panel: now focus is automatically setted on the first invalid input control, when saving/pushing data
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+
+Release Notes 2.3.1
+-------------------
+
+Final release 2.3.1 available
+- fixed bug on rendering TextFormattedColumns
+- fixed problem on using autoResize property in ImageControl
+- fixed problem on saving grid profile (on file and db) when using the IN operator with multiple values
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+
+Release Notes 2.3
+-----------------
+
+Final release 2.3 available
+- set translations with caps lock message in LoginDialog
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+
+Release Notes 2.2.9
+-------------------
+
+Final release 2.2.9 available
+- added a warning message to LoginDialog, when caps lock is pressed
+- change a bit the XXXResponse classes, by adding setError/setErrorMessage methods
+- fixed problem on rendering rowz in a grid having locked columns when using vertical scrollbar
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+
+Release Notes 2.2.8
+-------------------
+
+Final release 2.2.8 available
+- added SpinnerListControl and SpinnerNumberControl components
+- added SpinnerListColumn and SpinnerNumberColumn components for grid
+- changed GridPermissionManager interface declaration
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+
+Release Notes 2.2.7
+-------------------
+
+Final release 2.2.7 available
+- added another constructor to LoginDialog, in order to manually set the window size; useful when using OpenSwing with no "system" Look and feels
+- added "cleanUp" method to GridControl and Form panel, in order to clean up the row/form content in INSERT/EDIT modes
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+
+Release Notes 2.2.6
+-------------------
+
+Final release 2.2.6 available
+- fixed a problem with QueryUtil.updateTable, when updating table having also a BLOB type field
+- fixed a problem with GridController.selectedCell when changing row
+- fixed problem with FormattedTextColumn
+- changed NorwegianOnlyResourceFactory class with an updated version
+- added "strictUsage" property to date control/columns, in order to force validation of inputed text and clean up/restore previous correct date, when the text is incorrect
+- added DATE_COMPONENT_STRICT_USAGE global property to ClientSettings, in order to define the default value of "strictUsage" property to date control/columns
+- changed "getConnection" method in DataSourceConnection class, by surrounding code with try-catch within the method, in order to support Tomcat7/GlassFish 3 A.S.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+
+
+Release Notes 2.2.5
+-------------------
+
+Final release 2.2.5 available
+- fixed a problem with QueryUtil.getQuery, when reading a BLOB type field
+- added demo50, in order to test BLOB field reading/writing to Oracle db
+- improvements in "windows icon panel" of MDI frame (thanks to Marandola)
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+
+Release Notes 2.2.4
+-------------------
+
+Final release 2.2.4 available
+- lookup:
+  - fixed problem with maxCharacters and columns properties of lookup control
+  - added "showErrorMessage" property to LookupController, in order to hide the error message when validating an incorrect code
+- other input controls:
+  - improved behavior of FormattedTextControl when losting focus and the field is empty or set to the empty default mask
+- grid:
+  - GridController.selectedCell callback is invoked now also when selecting another column of the same row
+  - fixed bug introduced with past version of OpenSwing with lookup grid frames
+- MDI frame:
+  - fixed problem with "win icons panel" at the bottom of the MDI environment when adding more windows and removing all of them
+  - fixed a problem with maximized internal frames when closing them and ClientSettings.STORE_INTERNAL_FRAME_PROFILE is set to true
+  - fixed problem when double clicking within an empty are of the tree menu
+  - improved "uniqueInstance" property of internal frames: when trying to open an already not selected unique instance of a frame, now it receive the focus
+  - improved SwithDialog (thanks to Marandola) by showing the current selected frame in the list of opened frames
+  - added global properties to ClientSettings (thanks to Marandola), in order to customize the "Window" menu items and "File" menu items and "win icons panels" buttons (icons and visibility)
+  - added new menu item named "close window" to "Window" menu (thanks to Marandola), in order to close current selected window
+- TreeGridPanel:
+  - added "iconAttributeName" optional attribute, in order to customize the icon to show for each tree node
+  - added "backgroundColor" optional attribute, in order to set the background color for this component
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+
+Release Notes 2.2.3
+-------------------
+
+Final release 2.2.3 available
+- fixed orientation issue with GenericButton when using horizontal text alignment
+- changed default behavior of FilterButton when autoLoadData in grid is set to false: now FilterButton remains enabled
+- fixed problem with FilterButton when user profile is enabled and no rows are showed in grid
+- added new global property FIRST_CELL_RECEIVE_FOCUS to ClientSettings: if set to false, a GridControl will set focus on the last cell 
+  (instead of the first cell) when grid mode is switched to INSERT or EDIT mode
+- fixed problem with HibernateUtils when loading last block of data and block size is greater than the total number of rows
+- added new global property STORE_INTERNAL_FRAME_PROFILE to ClientSettings: it allows to automatically set internal frame size and location previously setted by user
+- improved Form panel: now Character type is supported in the value object binded to Form panel
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+
+Release Notes 2.2.2
+-------------------
+
+Final release 2.2.2 available
+- fixed problem with validateCell method of editable grid, when using DecimalColumn binded to attributes having type Float, Double, etc.
+- fixed problem with nested components in grid, when hiding columns in outer grid
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+
+Release Notes 2.2.1
+-------------------
+
+Final release 2.2.1 available
+- improved export to PDF/RTF formats: now it is possible to include a more recent version of iText 2.1.7 (for java 1.5/1.6 only);
+  changed org.openswing.swing.export.java classses, in order to support both old iText version (for java 1.4) and newer version.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+
+Release Notes 2.2
+-----------------
+
+Final release 2.2 available
+- changed a bit the GenericButton behavior on text alignment, when combined with ClientSettings.BUTTON_XXX_TEXT_POSITION global properties
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+
+Release Notes 2.1.9
+-------------------
+
+Final release 2.1.9 available
+- fixed problem with ButtonsAuthorizations.isEnabled method in combination with GenericButton permissions
+- fixed problem with ComboBoxControl when using it within the UI designer of an IDE
+- added two new global properties in ClientSettings class: BUTTON_HORIZONTAL_TEXT_POSITION and BUTTON_VERTICAL_TEXT_POSITION, in order to define the default text position for buttons
+- added new global property in ClientSettings class: COLUMN_HEADER_BORDER, used to customize the header border for all grids
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+
+Release Notes 2.1.8
+-------------------
+
+Final release 2.1.8 available
+- changed build.xml file, in order to create a third distribution jar file: commonos.jar, which includes only **\java\*.class files
+- changed README.txt file, in order to support new commonos.jar file
+- changed bat/.sh demo files, in order to support new commonos.jar file
+- moved EJBExportRemote class to org.openswing.swing.export.java package
+- added new global property named SHOW_WINDOW_MENU to ClientSettings class, in order to hide "Window" menu item from the menubar of MDI frame
+- added new global property named IGNORE_GRID_SELECTION_FOREGROUND to ClientSettings class, in order to define 
+  if the selected row in grid must have the foreground color defined for the single cell or use a unique color for all cells, defined through GRID_SELECTION_FOREGROUND 
+- disabled autoscrolling in grid when control key is pressed
+- fixed problem with FormattedTextControl on swithing between detail and insert mode: now the text within the control is correctly cleared up
+- added setImage(Image img) method to ImageControl, in order to directly set on it the image
+- improved getAllFromCriteria and getBlockFromCriteria methods in HibernateUtils class (thanks to Vinicius Silva Marandola), in order to support inner entities search criteria
+- added "dragCursor" property to TreePanel, in order to customize drag icon+text
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+
+Release Notes 2.1.7
+-------------------
+
+Final release 2.1.7 available
+- added support to short type attributes binded to NumericControl components
+- fixed the usage of USE_AS_TAB_IN_TEXTAREA global property to JTextArea/TextAreaControl
+- fixed problem with double click in grid's lookup, when lookup is a column of GridControl and GridControl has top or bottom locked rows
+- fixed problem with DateControl when date is manually setted 
+- added "showCustomErrorMessage" property to LookupController, in order to show a custom message when the code validation gave back an ErrorResponse.
+- added SHOW_CUSTOM_ERROR_MESSAGE_IN_LOOKUP global property to ClientSettings, in order to define the default value of "showCustomErrorMessage" property of LookupController.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+
+Release Notes 2.1.6
+-------------------
+
+Final release 2.1.6 available
+- added global property USE_AS_TAB_IN_TEXTAREA to ClientSettings, in order to define if TextAreaControl must listen for AS_TAB events
+- changed quick search in grid: now search pattern will be clean up when search window is hidden
+- fixed in JPAUtils the support to EclipseLink1.2 scrolling feature, in order to speed up the retrieval of last block of data
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+
+Release Notes 2.1.5
+-------------------
+
+Final release 2.1.5 available
+- fixed in JPAUtils the support to EclipseLink1.2 scrolling feature, in order to speed up the retrieval of last block of data
+- fixed runDemo17.bat file
+- fixed problem with unique toolbar in MDI frame
+- added support to inner objects in ComboBoxVOControl, thanks to Attila Szomor
+- added support for generic buttons authorizations, using buttonId property in GenericButton and new ButtonsAuthorizations method
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+
+Release Notes 2.1.4
+-------------------
+
+Final release 2.1.4 available
+- changed JPAUtils class:
+  - added support to EclipseLink1.2 scrolling feature, in order to speed up the retrieval of last block of data
+  - fixed problem with Hibernate EM for JPA 1.0 when scrolling grid to last block of data
+- improved date+time and time columns/controls: now it is possible to edit seconds/milliseconds too
+- improvements in MDI Frame: 
+  - now it is possible to define accelerator keys to bind to application menu, using setAccelerator method of ApplicationFunction
+  - now first level items in menubar can invoke functions
+- fixed problem in FormController.validateControl when selecting date in DateControl's calendar and focus was not within DateContro field
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+
+Release Notes 2.1.3
+-------------------
+
+Final release 2.1.3 available
+- lookup: fix problem on using AS_TAB property in lookup, when pressing ENTER button to validate
+- updated HungarianOnlyResourceFactory with some missing entries
+- fixed infinite loop problem on opening/closing internal frame multiple times
+- allowed column reordering with expandable rows for columns next to expandable column
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+
+Release Notes 2.1.2
+-------------------
+
+Final release 2.1.2 available
+- fixed problem with GenericButton when showing both icon and text
+- added "setShortCut" method to ApplicationFunction, in order to manually define the menu item shortcut
+- added "maxCharacters" property to all numeric type columns
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+
+Release Notes 2.1.1
+-------------------
+
+Final release 2.1.1 available
+- fixed problem on quick filter panel and filter panel, when using combobox columns where domain is not defined using domain id
+- fixed problem on quick filter panel when selecting a date from the calendar popup window
+- added "vievFileMenu" to MDIFrame, in order to show/hide "File" menu in MDI frame menubar
+- updated CzechOnlyResourceFactory and HungarianOnlyResourceFactory classes
+- added "setShowCalendarButton" to DateControl, in order to show/hide calendar button
+- improved LoginDialog, when using multilanguage application and changing language before logging in
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+
+Release Notes 2.1
+-----------------
+
+Final release 2.1 available
+- changed TreePanel behavior when selecting multiple nodes: now popup menu is showed in this case too
+- fixed problem in QueryUtil when using filtering grid with multiple values and is null operator
+- improved grid/form value object analysis: now multiple instances of the of the same class are managed
+- added "getLazyInitializedAttributes" to Form panel, in order to define attributes to skip on managing Form's value object
+- added HH_MM_SS_SSS and HH_MM_SS_SSS_AAA masks to Resources class, in order to support times expressed with milliseconds too
+- fixed problem with TextAreaColumn when setting maxCharacters property
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+
+Release Notes 2.0.9
+-------------------
+
+Final release 2.0.9 available
+- fixed problem with datetime/time columns when editing cells
+- fixed problem with FormattedTextColumn when editing cell
+- added setSortedColumn method to LoockController class, having an additional argument, used to specifythe sorting order
+- fixed bug in TreePanel, when using "setSelectionMode" mothod
+- fixed problem with QueryUtil when defining a query having a field name "xxxfrom"
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+
+Release Notes 2.0.8
+-------------------
+
+Final release 2.0.8 available
+- fixed bug on showing the number of pages in grid status panel
+- improved in MultiLineTextColumn the "maxCharacters" property
+- fixed problem on ComboBoxVOControl and ListVOControl: now quick search works fine
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+
+Release Notes 2.0.7
+-------------------
+
+Final release 2.0.7 available
+- updated CzechOnlyResourceFactory class, that contains czech translations for OpenSwing components
+- added HungarianOnlyResourceFactory class, that contains hungarian translations for OpenSwing components
+- now export operation is threaded
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+
+Release Notes 2.0.6
+-------------------
+
+Final release 2.0.6 available
+- added CzechOnlyResourceFactory class, that contains polish translations for OpenSwing components
+- fixed problem in LoginDialog when screen dpi is more than 96
+- fixed problem in importing data from xls file, when it contains numeric type cells
+- apply some changes to GridControl:
+  - fixed problem in GridControl when saving data: now the last editing cell is validated before saving data
+  - fixed problem on saving data on grid when the grid includes a ComboVOColumn having only one attribute mapped on it:
+    now changed row in grid is correctly recognized and saved
+  - improved ComboColumn: now it is possible to 
+  - fixed bug in ComboColumn when switching among grid's cells having combo and no value is changed in combo
+  - added support for DateChangeListener in DateColumn, DateTimeColumn and TimeColumn
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+
+Release Notes 2.0.5
+-------------------
+
+Final release 2.0.5 available
+Changes in grid control:
+- added "getCurrentSortedColumns" to GridControl
+- added "getCurrentSortedVersusColumns" to GridControl
+- changed addSortedColumn/removeSortedColumn in order to execute internal sorting if "orderWithLoadData" property is false and 
+  last method argument is set to false
+- added DateColumnSettings interface in order to customize date/time format for each cell in DateColumn, DateTimeColumn and TimeColumn  
+Added srcchayenne, srcejb3, srclnf folder to OpenSwing distribution.
+Changed translation in PolishOnlyResourceFactory.
+Fixed a problem on JPAUtils when fired an exception.
+Fixed problem in TreeMenu.
+Added HH_MM_SS and H_MM_SS_AAA to Resources class, in order to support seconds in DateTime and Time columns/control.
+Improved NumericControl in order to check for maxCharacters property in real time and not only when losting focus.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+
+Release Notes 2.0.4
+-------------------
+
+Final release 2.0.4 available
+Changes in grid control:
+- changed from private to public the "commitColumnContainer" method
+- added "allowColumnsSortingInEdit" boolean property to GridControl, in order to allow the columns sorting
+  in edit mode too, only when sorting is internally managed, i.e. not demanded to loadData method
+- added "afterSorting" callback method to OrderPolicy class, in order to override it and listen for
+  the sorting event, in case of internal sorting of columns
+- fixed problem in DateColumn: now date format is correctly setted in cell editor
+- added "anchorLockedColumnsToLeft" property, in order to anchor columns on the right margin of the grid
+Fixed problem with currency component when "currencySymbolOnLeft" property is set to "false"
+Fixed problem in PivotTable on rendering quantities when data contains holes.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+
+Release Notes 2.0.3
+-------------------
+
+Final release 2.0.3 available
+Changes in grid control:
+- fixed problem when hiding expandable column in nested grids
+- added "setOrderPolicy" method to GridControl in order to customize columns sorting policy, 
+  in case of sorting that does not invoke reloading data method
+- moved later the invocation of "afterInsertGrid" or "afterEditGrid" grid's callback methods
+Fixed problem with setSelectableColumn in LookupController.
+Added tooltip text to toggle buttons of windows bar on bottom of the MDI frame.
+Added new global property "AS_TAB" to ClientSettings class: it allows to define a key to use as for a TAB key, i.e.
+to move focus to next input control.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+
+Release Notes 2.0.2
+-------------------
+
+Final release 2.0.2 available
+Improvements in lookup controller:
+- added "setSelectableColumn" method to LookupController.
+- added "setFormattedTextColumn" method to LookupController.
+- applied "autoFitColumns" property to LookupController.
+Added BUTTON_XXX_IMAGE_NAME global properties to ClientSettings, in order to customize the image name to use for OpenSwing buttons, 
+such as insert, edit, copy, etc.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+
+Release Notes 2.0.1
+-------------------
+
+Final release 2.0.1 available
+Rebuilt the whole distribution.
+Changes/improvements in MDIFrame:
+- added global property SHOW_TREE_MENU_ROOT to ClientSettings, in order to hide root node in tree menu
+- added MIN_MENU_WIDTH global property to ClientSettings, in order to set the minimum width of MDI frame's tree menu.
+Fixed problems in input controls/grid columns:
+- fixed problem with set/getTextOrientation methods in text input controls and text based columns.
+- fixed problem on formatting currency values with BrazilianPortugueseOnlyResourceFactory class.
+- fixed problem with search feature in combo and list controls
+Added NavigatorBarController interface, implemented by Grids component and used within NavigatorBar component:
+it decouples NavigatorBar and Grids components, allowing to use the navigator bar in other components.
+Improved JPAUtils.getBlockFromQuery method, when using Hibernate implementation: now the case LAST_BLOCK_ACTION
+is faster than the previous version.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+
+Release Notes 2.0
+-----------------
+
+Final release 2.0 available
+Rebuilt beaninfo.jar.
+Improvements on lookup component:
+- added "visibleStatusPanel" property to LookupController, in order to show status panel on bottom of the lookup grid.
+- added VISIBLE_STATUS_PANEL global property to ClientSettings, in order to show/hide status panel on all lookup grids.
+Improvements on input controls/grid's columns:
+- named SELECT_DATA_IN_EDITABLE_FORM, in order to auto select input controls content, when focus is gained into the control, 
+  as for a grid's cell.
+- renamed global property SELECT_DATA_IN_EDIT to SELECT_DATA_IN_EDITABLE_GRID in ClientSettings class and added new global property
+- added TEXT_ORIENTATION global property to ClientSettings, in order to define the component orientation
+  (left to right or right to left) to use in text based input controls and grid columns.
+- added "textOrientation" property and getter/setter methods to all text based input controls and grid columns, 
+  in order to define the component orientation; the default value of "textOrientation" property is set to ClientSettings.TEXT_ORIENTATION
+- a click on a check-box column will update the value object istantly, also when grid is in read only mode
+Fixed problem in HibernateUtils class, when using entities having relationships to other entities that recursivelly refers the first one.
+Fix problem on CustomValueObjectsUtils class, when retrieving CHAR type fields.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+
+Release Notes 1.9.9
+-------------------
+
+Final release 1.9.9 available
+Rebuild whole project.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+
+Release Notes 1.9.8
+-------------------
+
+Final release 1.9.8 available
+Improvements on lookup:
+- changed demo9 in order to show how to add a lookup allowing multi codes selection to filter grid according to 
+  that list of codes. 
+- created MultiCodeLookupControl, in order to select more than one code from the list and use the list to filter data.
+Applied fixes on grid:
+- fixed problems related to search in grid feature when SEARCH_ADDITIONAL_ROWS global property is set to true. 
+- fixed problem with nested components in grid, when moving columns
+- changed export in XLS format in order to support recent versions of HSSF library
+- fixed problem on exporting data from grid when using Substance LnF
+Improvements in image components:
+- added "showPreview" property to ImageControl and ImageColumn components, in order to show a preview of the image
+  selected in the file chooser.
+- Added SHOW_PREVIEW_OF_IMAGE global property to ClientSettings class, in order to define the default value of
+  "showPreview" property of ImageControl and ImageColumn components.
+Improvements in MDI frame: 
+- added AUTO_EXPAND_SUBTREE_MENU global property to ClientSettings class, in order to define a subtree of tree menu
+  to automatically expand when showing MDI frame.
+- added global property MDI_FRAME_DECORATED to ClientSettings class, in order to (de)activate decoration of LnF.
+Improved TipPanel component: now a "Select tip" button has been added in order to select in a fast way from a list of tips the desired tip (thanks to Jacek ).
+Added MAX_NR_OF_LOOPS_IN_ANALYZE_VO global property to ClientSettings class, in order to limit the number of nested loops to execute when
+analyzing value object structure within VOModel, VOListAdapter and LookupController classes.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+
+Release Notes 1.9.7
+-------------------
+
+Final release 1.9.7 available
+Fixed problem on using CheckBoxListControl with multiple selection mode setted.
+Added global property SHOW_NAVIGATOR_BAR_IN_LOOKUP to ClientSettings, in order to show a navigator bar in lookup grid frame, for all lookups.
+Added "showNavigatorBar" property to LookupController, in order to define if a navigator bar has to be showed in lookup grid frame, for a specific lookup.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+
+Release Notes 1.9.6
+-------------------
+
+Final release 1.9.6 available
+Added global property HEADER_FOREGROUND_COLOR to ClientSettings class, in order to set the default foreground 
+color for column headers for all grids.
+Changed default value for "headerForegroundColor" property in Column class: now it is filled with HEADER_FOREGROUND_COLOR
+global property.
+Fixed problem with CheckBoxColumn when positive/negative values are not Boolean.TRUE/FALSE values.
+Fixed problem on using UI designer for OpenSwing components on Linux+Java1.6.
+Added "selectDataInEdit" property to text/numeric type columns, in order to auto select cell content when starting the cell editing.
+Added "SELECT_DATA_IN_EDIT" global property to ClientSettings, in order to  auto select cell content when starting the cell editing for all grids.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+
+Release Notes 1.9.5
+-------------------
+
+Final release 1.9.5 available
+Rebuild whole project.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+
+Release Notes 1.9.4
+-------------------
+
+Final release 1.9.4 available
+Added global property SEARCH_ADDITIONAL_ROWS in ClientSettings, used by grid control in order to enable the retrieval of additional rows in fast search, 
+when search criteria fails.
+Added boolean property named "searchAdditionalRows" to GridControl, in order to enable the retrieval of additional rows in fast search, 
+when search criteria fails. Its default value is defined through ClientSettings.SEARCH_ADDITIONAL_ROWS global property.
+Fixed problem in GridControl on retrieving data: now status bar showes "loading data..." message again.
+Fixed bug in CayenneUtils class, when applying filtering conditions having multiple values.
+PivotTable improvement: added expand/collapseRow and expand/collapseColumn methods, in order to 
+dynamically expand/collapse selected cell in data table.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+
+Release Notes 1.9.3
+-------------------
+
+Final release 1.9.3 available
+Improved check box column: now change value event is listened when clicking on check-box and no more after losting focus from cell,
+as for other columns.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+
+Release Notes 1.9.2
+-------------------
+
+Final release 1.9.2 available
+Improved ClientUtils.displayURL() method, in order to support Mac OS browsers.
+Fixed problem when using PivotTable in 3tiers applications.
+Added setVisibleColumn() method to GridControl, in order to dinamically show/hide columns in a already visible grid.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+
+Release Notes 1.9.1
+-------------------
+
+Final release 1.9.1 available
+Added French internationalization settings class.
+Added Norwegian internationalization settings class.
+Added addPopupMenuItem to TreePanel, in order to add a menu item to a parent menu item.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+
+Release Notes 1.9
+-----------------
+
+Final release 1.9 available
+Added "expandNode" and "collapseNode" methods to TreePanel and TreeGridPanel, in order to expand/collapse a single node.
+Fixed problem on opening some detail frames, having a lookup auto-completition feature enabled.
+Fixed problem when using Substance LNF on loading grid having an error.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+
+Release Notes 1.8.9
+-------------------
+
+Final release 1.8.9 available
+Added global boolean property HIDE_ZERO_DIGITS, used in numeric controls/columns in order to show/hide zero digits.
+Added "hideZeroDigits" boolean property to NumericControl and CurrencyControl, as for DecimalColumn, in order to show/hide zero digits. 
+Added global boolean property CURRENCY_SYMBOL_ON_LEFT, used in currency controls/columns 
+in order to show currency symbol on the left or on the right of the numeric value.
+Added "currencySymbolOnLeft" boolean property to CurrencyControl and CurrencyColumn, in order to show currency symbol on the left or on the right of the numeric value.
+Updated PolishOnlyResourceFactory content.
+Fixed problems when using afterMDIcreation callback with Substance Look 'n Feel in demo10.
+Fixed problem on selecting check-boxes in grid when it is in read-only mode.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+
+Release Notes 1.8.8
+-------------------
+
+Final release 1.8.8 available
+Added SHOW_SCROLLBARS_IN_MDI global property to ClientSettings, in order to show scrollbars within MDI desktop pane.
+Fixed problem with page number in navigator bar when fetching last block of data.
+Fixed problem with check-box column in read only mode when clicking on it: now one click only is required to change check-box state.
+Fixed problem with auto completition feature in lookup component.
+Changed MDI frame default starting in Linux: now GTK look 'n feel is replaced by Metal Look 'n Feel.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+
+Release Notes 1.8.7
+-------------------
+
+Final release 1.8.7 available
+Improved PivotTable component:
+- now it is possible to drag 'n drop row/column/data fields directly into the PivotTable, in order to swap their position.
+- added "dataFieldRenderet" property to PivotTable component, in order to customize font, background/foreground color for data cells.
+Added INSERT_ROWS_ON_TOP global property to ClientSettings, in order to define for all grids that new rows are added at the bottom of the grid, 
+instead of adding them at the top.
+Improved DateControl, DateColumn and DateTimeColumn, by adding "defaultDate" property, used to set a default date in calendar window 
+when opening it and no date has been still set.
+Fixed problems in GridControl:
+- duplicate row feature now works also with "insertRowsOnTop" property set to false
+- new rows removing now correctly operates also with inner value objects
+Applied some changes to MDI environment and graphics components, in order to support "substance" Look 'n Feel library for Java 5.
+Changed "demo10" in order to show how to use "substance" Look 'n Feel library for Java 5.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+
+Release Notes 1.8.6
+-------------------
+
+Final release 1.8.6 available
+Added "uniqueInstance" boolean property to InternalFrame, in order to disable the creation of more than one instance of subclass of InternalFrame.
+Added new component: PivotTable, used to aggregate data per rows/columns and show data in grid.
+Added several data readers: CSV file reader, generic TableModel reader, Value Objects list reader, used to feed PivotTable component.
+Updated documentation in web site, by adding a section about new PivotTable component.
+Fixed problem with bean info of "autoFitCoumn" property for all columns.
+Fixed problem with bean info of GridControl component.
+Fixed problem in HibernateUtils class on composing filtering conditions.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+
+Release Notes 1.8.5
+-------------------
+
+Final release 1.8.5 available
+Changed About dialog content, by replacing max memory allocation with current memory allocation.
+Improved TreeGridPanel: now column headers use ClientSettings.HEADER_HEIGHT global property as header height.
+Added "autoFitCoumn" property to all columns, in order to auto fix column sizes, according to their text headers.
+Added AUTO_FIT_COLUMNS global property to ClientSettings, in order to define the default value for "autoFitCoumn" property of columns.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+
+Release Notes 1.8.4
+-------------------
+
+Final release 1.8.4 available
+Fixed a problem on selecting multiple rows in grid, using java 1.6.
+Implemented "hideButton" property in CodLookupColumn.
+Fixed problem with code autocompletition in lookup: now it correctly works also when using mouse to select code with Java 1.6.
+Improved LinkButton component:
+- added "uri" property, in order to automatically open an URI in default browser, when clicking on the link
+- added "labelAttributeName" property, in order to bind link button to the container Form panel and automatically set label from an attribute value of the Form's value object
+- added "tooltipAttributeName" property, in order to bind link button to the container Form panel and automatically set tooltip from an attribute value of the Form's value object
+- added "uriAttributeName" property, in order to bind link button to the container Form panel and automatically set URI to open, from an attribute value of the Form's value object
+- added "addLinkButton" and "removeLinkButton" methods in Form panel, in order to manage abilitation state of LinkButton, according to current Form state
+Created new GridControl column: LinkColumn; this link type column allows to click onto the link within the cell and automatically open the specified URI.
+Changed "demo4" sample application, in order to show how to use LinkButton and LinkColumn.
+Fixed problem in NavigatorBar when "showPaginationButtons" property is set to false and ClientSettings.SHOW_PAGINATION_BUTTONS_ON_NAVBAR is set to true.
+Fixed OutOfMemoryError problem when using HibernateUtils with inner value objects.
+Created unique toolbar on top of MDIFrame, in order to manage generic operations for grid and Form panel. 
+Created "demo48" sample application, to show how to use a unique toolbar in MDIFrame for all grids and Form panels.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+
+Release Notes 1.8.3
+-------------------
+
+Final release 1.8.3 available
+Added "demo47" sample application, in order to show how to create a 3 tier client-server application, having server-side realized using EJB 3.0 and JPA 
+(see README.txt file included in "demo47" source folder for details).
+Added EJB 3.0 remote invokation, based on ClientSettings.EJB_EXPORT_BEAN_NAME and EJBExportBean stateless session bean and EJBGridDataLocator.
+Improved login dialog: now authentication task is performed when user press enter key onto username field too, if store account check-box is selected.
+Improved NavigatorBar: 
+- added "showPaginationButtons" property in order to redefine global property ClientSettings.SHOW_PAGINATION_BUTTONS_ON_NAVBAR per single navigator bar.
+- added "showPageNumber" property in order to hide the page number input field.
+Improved LookupController class:
+- added "allColumnsSelectable" property that sets "columnSelectable" property for all columns, in order to show/hide menu items for all columns in popup menu on lookup grid
+- now auto completition feature is able to work with inner value objects
+Improved internal frame: added "modal" property, in order to set a modal internal frame. See "demo10" employee detail frame to see how to use this property.
+Improved application menu:
+- added new constructors to ApplicationFunction class, in order to specify tooltip text for functions and folders
+- tooltip text is now showed for tree menu nodes
+- tooltip text is now showed for menu items in menu bar
+- added ClientSettings.SHOW_TOOLTIP_IN_MENUBAR global property, in order to deactivate tooltip text in menu bar
+- added ClientSettings.SHOW_TOOLTIP_IN_TREEMENU global property, in order to deactivate tooltip text in tree menu nodes
+- added ClientSettings.SHOW_TOOLTIP_IN_MDISTATUSBAR global property, in order to show tooltip text in MDI bottom area (status bar), when user is selecting a menu item in menu bar
+Changed VOListResponse signature: ArrayList argument has been replaced by List type argument, in order to simplify its adoption with ORM tools.
+Fixed problem in HibernateUtils, when applying lower and uppoer value filter conditions onto date type columns.
+Fixed problem in ComboBoxControl when switch it to edit mode: now its background color is correctly setted.
+Fixed problem in FormattedTextControl, when using setText method with numeric type attribute.
+Improved grid control:
+- added "removeSortedColumn" method in order to remove current sorting condition, for a specified column
+- added "addSortedColumn" method in order to add a sorting condition, for a specified column
+- in combo-box column is now possible to specify a collection of combo values having items with the same item description
+- grid filter now supports the filtering of column binded to primitive type attributes
+Fixed a problem with FormattedTextColumn: now horizontal alignment setting is correctly managed by this column.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+
+Release Notes 1.8.2
+-------------------
+
+Final release 1.8.2 available
+Improved HibernateUtil class, in order to support sorting/filtering per attributes of inner value objects (see "demo17" sample application).
+Improved user grid profile and columns level permissions: now settings are cached after retrieval.
+Fixed problem in GridControl with check-box type cells, when move to edit mode directly within the check-box cell.
+Fixed problem with TextFormattedColumn when used with numeric values in filter panel.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+
+Release Notes 1.8.1
+-------------------
+
+Final release 1.8.1 available
+Fixed problems in GridControl:
+- now loadDataCompleted is invoked when loading zero records too
+- improved pagination input field in navigator bar: now it operates correctly also when "totalAmountOfRows" is not setted
+Improved GridControl:
+- added support to permissions at column level; now it is possible to show/hide specific columns, as well as force columns mandatory or column editability
+- added "demo45" sample application, in order to show to permissions at column level operate and how to create a permissions management front-end
+- added support for a generic CustomValueObject, that can be mapped with dynamic sql, in order to create a grid at run time, using mapping
+  between sql select fields and CustomValueObject's attributes
+- added "demo46" sample application, in order to show how to use CustomValueObject to create a grid at run time based on a dynamic SQL
+Fixed problem on filtering data on grid with value objects having Integer type attributes.
+Fixed problems in QueryUtil:
+- when applying filtering conditions with fields having alias
+- when loading all rows and user has pressed last button
+Fixed problem with auto-completition panel in lookup control, when user is scrolling the list of codes.
+Improved HibernateUtil class, in order to support sorting/filtering per attributes of inner value objects (see "demo17" sample application).
+Improved MDIFrame menu bar: now it is possible to add a separator between menu items using ApplicationFunction constructor.
+Changed "demo10" sample application, in order to show how to add a separator between menu items using ApplicationFunction constructor.
+Fixed PolishOnlyResourceFactory
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+
+Release Notes 1.8
+-----------------
+
+Final release 1.8 available
+Improved Form focus management.
+Improvements in GridControl:
+- added "showPageNumber" property to GridControl, in order to show page number in GridControl status bar
+- added SHOW_PAGE_NUMBER_IN_GRID global property to ClientSettings, in order to define default value for "showPageNumber" grid property
+- added "Page" and "of" translations to XXXOnlyResourceFactory classes
+- added an input field in navigator bar, in order to specify the page number to load (visible only in case of data loading one page per time)
+- change "demo4" sample application to show how to determine the total number of pages and records in grid
+- added "totalAmountOfRows" property to VOListResponse to store the total number of records in result set, 
+  in order to show total number of pages in grid (if "showPageNumber" is true) and to show total number of records
+- fixed bug on filtering data on grid, when current block of data showed in grid is not the first one
+Improved MDIFrame:
+- added "addSeparatorToMenuBar" method in order to add separators in menu bar
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+
+Release Notes 1.7.9
+-------------------
+
+Final release 1.7.9 available
+Improvements in exporting data from grid:
+- added "getFontTitle" callback method to ExportToPDFAdapter adapter class, in order to customize font title of exporting document
+- added "getGenericComponentFont" callback method to ExportToPDFAdapter adapter class, in order to customize font for generic data added to exporting document
+- added ExportToRTFAdapter adapter class to ClientSettings, in order to customize RTF exporting documents, as for ExportToPDFAdapter
+Improvements in internal frame management when closing it:
+- changed confirm window when closing an internal frame: now "save changes dialog" contains three options: yes, now and cancel
+- added "saveChanges" callback to InternalFrame class, in order to customize "save changes task", when saving changes on internal frame closing
+- changed XXXOnlyResourceFactory classes, by adding new translation "save changes?" and in Resource_xx.xml files included with sample applications
+- added "checkComponents" method to InternalFrame, in order to explicitelly check for changes inside the internal frame
+Improvements in GridControl:
+- added "save" method to GridControl, in order to programmatically save data (according to current grid mode)
+- fixed problem in "reloadData" method: now loadDataCompleted callback is invoked as the last event (after automatic row selection)
+- fixed problem when locking rows on top: now column headers are correctly translated
+Improvements in Form panel:
+- added global property to RELOAD_LAST_VO_ON_FORM ClientSettings in order to define what to do when pressing reload button in INSERT mode:
+  (i) clear all input controls or (ii) reload last value object already loaded in the past
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+
+Release Notes 1.7.8
+-------------------
+
+Final release 1.7.8 available
+Improvements in GridControl:
+- added optional check-box list control within quick filter panel, in order to filter data in column starting from selected items;
+  items for list are retrieved as the collection of distinct values stored in database table column
+- added method "addListFilter" to GridControl and "listFilter" property to columns, in order to show combo-box filter in column header
+- changed "demo6" in order to show how to use check-box list filter feature
+- added "mergeCellsOnTop" and "mergeCellsOnBottom" methods to GridControl, in order to merge cells on top/bottom of grid component
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+
+Release Notes 1.7.7
+-------------------
+
+Final release 1.7.7 available
+Improvements in exporting data: added GridExportCallbacks class, in order to include additional data before and after grid content and
+after each grid's row just exported; in this way it is possible to combine data for master grid with data of a detail grid.
+Changed "demo10" sample application in order to show how to export master/detail grids in a single document with nested data.
+Changed behavior of "reloadData" method in GridControl: now it reloads grid content starting from the first record in result set;
+after that, the first record is selected.
+Added "reloadCurrentBlockOfData" method to GridControl, in order to reload current block of in grid; after that, old selected row is selected again.
+Improved MDI frame: add popup menu to desktop pane, in order to select custom image to use as background.
+Improved ComboVOColumn: added "reloadItems" method, in order to reload combo content.
+Fixed problem in attribute editor inside the UI designer, when the value object contains more than one inner v.o. of the same type.
+Added "isChanged" method to TreePanel, in order to decide whether tree content has been changed; invoked by InternalFrame.closeFrame();
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+
+Release Notes 1.7.6
+-------------------
+
+Final release 1.7.6 available
+Translations:
+- updated Resources_xx.xml files included in demos and XXXOnlyResourceFactory classes in order to remove unused translations
+- added PolishOnlyResourceFactory class, that contains polish translations for OpenSwing components
+Improvements in GridControl:
+- in case of GridControl+Form binding, when pressing up/down keys in vertical scrollbar the Form is reloaded
+- changed ExportOptions class, used to define export document content: now it is possible to add more than one grid per document 
+  and it is possible to add external data in matrix format too
+- changed "demo10" sample application in order to show how to export detail+grid in a single document 
+  and how to export grid+grid content in a single document 
+Improvements/fixes in Form panel:
+- fixed problem when closing internal frame with ASK_BEFORE_CLOSE=true and changed input control having currently the focus on it
+- moved the time of VOModel contruction, in order to correctly listen "createInnerVO" property
+- fixed problem on VOModel contruction, when using nested value objects having the same v.o. type
+- fixed problem on VOModel contruction, when value object contains collections type attributes (not supported by VOModel)
+Improvements/fixes in lookup:
+- now it is possible to map attributes of inner value objects to columns of lookup grid frame
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+
+Release Notes 1.7.5
+-------------------
+
+Final release 1.7.5 available
+Improved progress bar management in MDI frame.
+Fixed a bug, related to a NullPointerException fired in date column when closing the frame that contains the grid.
+Fixed bug in Form panel when invoking executeReload method: afterReloadData callback was prematurelly called.
+Improved filter panel in grid: now check-box columns are supported in filtering conditions pane.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+
+Release Notes 1.7.4
+-------------------
+
+Final release 1.7.4 available
+Improved CodLookupControl by adding "lookupButtonVisible" property, in order to optionally hide lookup button.
+Added to ClientSettings the global property GRID_SCROLL_BLOCK_INCREMENT used to define the block increment when scrolling grid control (one row/page per time).
+Improved HibernateUtils class by adding getBlockFromCriteria and getAllFromCriteria, in order to inherit the correct optimization to query through 
+Criteria argument (e.g. inner join, secondary select, etc.) and apply other external filtering conditions.
+Fixed bug in Controller class when registering GenericAction classes.
+Fixed bug in Form panel when linking it to a GridControl and using the navigator bar on Form.
+Excluded Tutorial.swf Flash file from OpenSwing standard distribution and added it to new "OS_Tutorial.zip" distribution.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+
+Release Notes 1.7.3
+-------------------
+
+Final release 1.7.3 available
+Fixed problems related to vertical alignment and margins with ComboBoxVOControl and ComboVOColumn.
+Fixed problems related to margins with ListVOControl.
+Fixed problem with progress bar stopping of MDIFrame.
+Fixed problem with FileColumn when uploading files and with upload button editability.
+Fixed problem in lookup component when binding inner value object in lookup v.o. to parent v.o.
+Improved HibernateUtils by internally supporting Criteria object: new methods getBlockFromClass and getAllFromClass allow to specify FetchMode setting, 
+in order to apply the correct optimization to query (e.g. inner join, secondary select, etc.).
+Improved DomainColumn and ComboBoxControl: added "translateItemDescriptions" boolean property, in order to avoid translation of item descriptions.
+Improved GridControl:
+- cell selection can be moved up/down by using up/down keys also when cell is in edit.
+- renamed "headerTextAlignment" property in "HeaderTextHorizontalAlignment"
+- added "headerTextVerticalAlignment" property, in order to set vertical text alignment in column headers
+- added global property ClientSettings.HEADER_TEXT_VERTICAL_ALIGNMENT, in order to define the default value of "headerTextVerticalAlignment" grid column property
+- added "getExportDialogSize" to GridController, in order to redefine the exporting dialog size
+- added "getExportingFormats" to GridController, in order to redefine the document formats to propose in exporting dialog
+Added to ClientSettings the global property EXPORTING_FORMATS used to define the default document formats when exporting the grid content.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+
+Release Notes 1.7.2
+-------------------
+
+Final release 1.7.2 available
+Improved grid export feature by changing ExportOptions class:
+- added "showFilteringConditions" property, used to add a region on top of the exported grid, reporting filtering conditions;
+  moreover, new global property SHOW_FILTERING_CONDITIONS_IN_EXPORT has been added to ClientSettings class: it is used to define the default value of "showFilteringConditions" flag
+- added "title" property, in order to set a title for exporting document;
+  moreover, new global property SHOW_TITLE_IN_EXPORT has been added to ClientSettings class: it is used to automatically set the frame title in "title" property
+Improved GridControl:
+- added "exportGrid" callback method in GridController, in order to customize exporting result, for instance by adding a title or filtering pane, 
+  by accessing ExportOptions object automatically generated by grid; a programmer can change some of these settings, before performing the export task
+- added "editOnSingleRow" property to GridControl, in order to allow row editing on one row only: the current selected row
+- added "demo44" sample application to show how to use "editOnSingleRow" property and how to customize grid exporting result
+- fixed bug on required columns checking when saving data on grid
+- now when saving rows having mandatory columns not completely filled, the warning message reports also the name of the required column
+- now delete button is enabled when inserting rows in grid and it can be used to remove just inserted rows
+- fixed bug when removing new rows in insert mode and grid contains ComboBoxColumn objects
+- fixed bug with FileColumn when downloading a file just uploaded
+Changed behavior in Form panel in INSERT model when pressing reload button: now input controls are empty out without requiring any data loading.
+Fixed problem when finalizing a Form panel.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+
+Release Notes 1.7.1
+-------------------
+
+Final release 1.7.1 available
+Added "headerHeight" property to GridControl, in order to change the height of columns header. 
+When that height is set to at least two lines of text, then header text can be automatically splitted in more lines.
+Added new column for grid: FileColumn; this column allows to upload/download file and bind its byte[] to a cell in grid column.
+Added "demo43" sample application to show how to use new FileColumn in editable grid.
+Added "ADD_ROW_IN_GRID" and "REMOVE_ROW_FROM_GRID" global properties to ClientSettings, in order to customize shortcut keys (down/up keys) used to add and remove new rows from grid.
+Fixed problem in grid control when using "recursive" value objects.
+Added BrazilianPortugueseOnlyResourceFactory that contains brazilian-portuguese translations required by OpenSwing components (thanks to Artur Saldanha).
+Improved ListVOControl by adding "reloadItems" methods, used to reload list content.
+Improved Controller class of OpenSwing server-side layer: added GenericAction class, in order to allow multiple methods inside the same action class, 
+each of these methods are invokable from client-side.
+Fixed problem in JPAUtil class, on defining query having a value object alias in the from clause.
+Splitted ListControl in two distinct components: ListControl and CheckBoxListControl: only the latter shows check-boxes to select items.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions. 
+
+
+
+Release Notes 1.7
+-----------------
+
+Final release 1.7 available
+Improved grid control: now is possible to insert records in edit mode too, using "allowInsertInEdit" property.
+Added "insertRowsOnTop" property to grid control, in order to define whether adding new rows on top or on the bottom of the grid.
+Changed "demo9" sample application to show how to insert rows in edit mode.
+Improved HibernateUtils to support HSQL. Changed "demo17" sample application in order to show how to use HSQL.
+Fixed bug on using ClientUtils.getData() method.
+Fixed problem on rows selection using SHIFT+UP/DOWN keys in grid.
+Fixed problem exporting grid content in XLS format for java.util.Date type columns.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions. 
+
+
+
+Release Notes 1.6.9
+-------------------
+
+Final release 1.6.9 available
+Fixed a problem with DateControl when selecting a date from calendar: now related v.o. attribute is updated when losting focus on date control and not only when saving data.
+Improved GridControl selection policy: now it is possible to use SHIFT+UP/DOWN keys to select more than one rows (when ListSelectionMode is not SINGLE_SELECTION).
+Added SpanishOnlyResourceFactory class, that can be used for internationalization settings with Spanish language.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions. 
+
+
+
+Release Notes 1.6.8
+-------------------
+
+Final release 1.6.8 available
+Added new global property "AUTO_EXPAND_TREE_MENU" to ClientSettings, in order to auto expand tree nodes in application tree menu of MDIFrame.
+Fixed problem in TreePanel when invoking repaintTree() method: in past releases this method removed some listeners.
+Improved nested components management in grid: now when combining a nested editable Form with a grid, an update in Form panel will update also Grid content.
+Changed "demo42" sample application, in order to show how to link Form panel and grid and update grid content when saving data in nested Form.
+Improved auto completition feature in lookup component: now code in auto completition codes list can be selected using mouse too.
+Fixed problem with nested components when pressing reload button in in grid: now rows are all collapsed on reloading data.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions. 
+
+
+
+Release Notes 1.6.7
+-------------------
+
+Final release 1.6.7 available
+Fixed problem when exporting data from grid whose data model uses nested value objects.
+Improved LoginDialog by adding two arguments, in order to translate "username" and "password" labels when needed.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions. 
+
+
+
+Release Notes 1.6.6
+-------------------
+
+Final release 1.6.6 available
+Added "attributeName" property to GenericButton, in order to link it to a Form panel and set its text based on attribute value of Form v.o.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions. 
+
+
+
+Release Notes 1.6.5
+-------------------
+
+Final release 1.6.5 available
+Improved management of nested components within grid control and added CTRL+P/L accelerators to expand/collapse cells in grid.
+Added EXPAND_CELL_KEY and COLLAPSE_CELL_KEY properties to ClientSettings, in order to customize key accelerators used to expand/collapse cells.
+Improved ComboBoxVOColumn usage, by supporting inner value objects.
+Improved QueryUtil class by supporting inner value objects in insert and update methods.
+Added callback method "loadDataCompleted" to TreeDataLocator class, in order to intercept tree model loading completition for TreePanel and TreeGridPanel.
+Improved "Switch" dialog in "window" menu: now reported windows are chronologically sorted.
+Fixed bug in "window" menu of MDI frame: items "cascade", "tile horizontally" and "tile vertically" were inactive for two opened windows
+Fixed problem with numeric control and column: now 0.xxx numbers are correctly showed.
+Fixed problem with date column: now dd mm yyyy separator is correctly showed when redefined in ClientSettings.
+Fixed problem on rendering cells in grid having cell span defined.
+Fixed bug on rendering values in FormattedTextColumn introduced in last release.
+Fixed bug with grid profile when closing Internalframe.
+Fixed bug in HibernateUtils when applying filtering condition on grid having OR operator (e.g. field = 'a' or same field = 'b')
+Added "demo41" sample application to show how to use ColumnBoxVoColumn in grid, in combination with inner value objects.
+Added "demo42" sample application to show how to nest a Form panel within a grid.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions. 
+
+
+
+
+Release Notes 1.6.4
+-------------------
+
+Final release 1.6.4 available
+Improved grid control by providing left/right/top/bottom properties in grid columns, in order to define cell margins. 
+As default value, text columns have 2 pixels as left margin, numeric columns have 2 pixels as right margin.
+Improved ComboBoxColumn by providing "foreignKeyAttributeName" as for ComboBoxControl.
+Fixed memory leak problems in OpenSwing components and in calendar library.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions. 
+
+
+
+Release Notes 1.6.3
+-------------------
+
+Final release 1.6.3 available
+Improved grid control by allowing to expand cell in a hierarchical way, by showing nested components at row level, 
+such as a nested grid inside an expandable row.
+Added "demo40" sample application, to show how to create a frame that contains a main grid having two level nested grids within it.
+Added new global property "DISABLED_INPUT_CONTROLS_FOCUSABLE" in ClientSettings class: it allows to move focus to disabled input controls too, 
+in order to set cursor on them, select their content and allow copy & paste operations.
+Improved OptionPane utility class, by supporting translations of buttons according to selected language.
+Fixed problem with user profile on grid, when storing new profiles and with grids locked on top/bottom.
+Improved DecimalColumn, PercentageColumn and CurrecnyColumn by adding "hideZeroDigits" property, that allows to hide/show zero digits, after decimal symbol.
+Fixed problem when editing numeric values in columns of grid having decimal values.
+Improved TextControl when using "upperCase" property.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions. 
+
+
+
+Release Notes 1.6.2
+-------------------
+
+Final release 1.6.2 available
+Improved FormattedTextColumn and changed "demo3" sample application to show how to use JFormattedTextField.AbstractFormatter class.
+Added "demo39" sample applications to show how to drag nodes from a tree and drop onto another tree.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions. 
+
+
+
+Release Notes 1.6.1
+-------------------
+
+Final release 1.6.1 available
+Added code auto completition to lookup component; this feature can be enabled using global property ClientSettings.LOOKUP_AUTO_COMPLETITION_WAIT_TIME
+or lookup property "autoCompletitionWaitTime".
+Updated "demo10" sample application to show how to use this new feature.
+Added "expandRoot" property to TreePanel and TreeGridPanel to define is auto expand root's children when "expandAllNodes" property is set to "false".
+Fixed problem in TreeGridPanel with horizontal alignment setting.
+Improved ComboBoxVOControl, by adding "reloadItems" method to force items reloading.
+Fixed problem on loading images and "demo2" sample application.
+Fixed problem with internal sorting in grid, when using characters set dependent on Locale.
+Updated "demo3", "demo20", "demo24" sample applications by filling in formatted text columns in database table.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions. 
+
+
+
+Release Notes 1.6
+-----------------
+
+Final release 1.6 available
+Changed Form panel, grid control and TreePanel components: now a wait cursor is showed when loading data on these components.
+Added commands "select all" and "deselect all" to popup menu in grid, for check-box type columns.
+Added commands for copy/cut/paste to a popup menu showed over an input control when right mouse clicking on it.
+Improved "window" menu in MDI menu bar: 
+- added "switch..." menu item to open a window dialog showing all opened internal windows and select a window to set to front
+- added numeric mnemonic (1, 2, 3, ... 9) at the left of menu items related to internal opened windows
+- added "reduce to icon" and "reduce all to icon" menu items
+- added "cascade", "tile horizontally/verically" menu items
+Improved TreeGridPanel:
+- now a leaf can be directly expanded using TreeWillExpandListener listener
+- added "setColumnAlignment" method to specify column alignment
+- added "rootVisible" property to show/hide root node
+Created ItalianOnlyResourceFactory class, that can be used to create italian based applications: it contains all OpenSwing translations, as with EnglishOnlyResourceFactory.
+Fixed NullPointerException bug, fired when using ListControl.
+Changed AboutDialog: if about text contains a link, then when clicking on it, default browser will be opened.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions. 
+
+
+
+Release Notes 1.5.9
+-------------------
+
+Final release 1.5.9 available
+Created "import data" button, that can be linked to a grid control and allows to import records in grid starting from an XLS or CSV file.
+Updated "demo10" sample application to show how to link new import button to an editable grid.
+Improved LoginDialog:
+- added constructor to support language selection in login dialog
+- added constructor to support password encryption, based on PBEWithMD5AndDES algorithm, to allow encrypted password storing (e.g. in database)
+Created CryptUtils utility class, to support encryption and decryption of bytes[] or String objects.
+Added "demo38" to show how to configure a LoginDialog with language selection, password encryption, encrypted password storing in database and account storing in local file system.
+Added "buttonBehavior" property to generic buttons, so it is possible to override the global property ClientSettings.BUTTON_BEHAVIOR
+to redefine button content: image only, text only or image and text.
+Improved TreeGridPanel:
+- by allowing to use some listeners in tree: TreeExpansionListener, TreeWillExpandListener and TreeSelectionListener
+- by supporting data formatting in the first column of the grid
+Added "demo37" sample application, to show how to use the TreeGridPanel component, whose tree nodes are dinamically fetched,
+when expanding a single node.
+Applied little change to algorithm that assigns mnemonics to menu items in MDI's menu bar: now it applies only letters or digits.
+Added support for hiperlink navigation in about dialog when its content is HTML based.
+Fixed a bug in date control when language identifier is in form "xx_yy".
+Fixed a bug in grid profile management.
+Change default behavior of lookup control, using new global property ClientSettings.FORCE_FOCUS_ON_LOOKUP_CONTROL: 
+now as default value (false) the focus is not automatically set over lookup button if code field is filled and user press TAB.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions. 
+
+
+
+Release Notes 1.5.8
+-------------------
+
+Final release 1.5.8 available
+Fixed bug in numeric/currency column: with double or float data types a ??? was showed instead of the correct data.
+Improved code snippets readability in the web site documentation.
+Added a Flash tutorial to web site, that shows how to create an MDI application having editable grid and master/detail functionalities.
+Improved lookup controller: 
+- now it is possible to customize lookup grid frame and lookup tree+grid frame, by specifying an ad hoc GridController class for grid
+- a buttons panel can be added on top of the lookup grid frame to insert/edit/delete/export/filter data directly from lookup grid
+Fixed problem in TreePanel on rendering long node descriptions, using java 1.6.
+Fixed problem with tooltip property in check-box/radio button controls.
+Change mandatory red simbol, by using an image instead of a "*" char: this normalize the dimension of mandatory symbol in all JVMs.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions. 
+
+
+
+Release Notes 1.5.7
+-------------------
+
+Final release 1.5.7 available
+Improved lookup control: 
+- now TAB key pressing inside the code field moves focus to next component instead of the lookup button if code field is not empty.
+- added BeanInfo class for LookupController and added two property editors to use in UI designer: one for lookup frame type and the other for defining action to execute when code is not valid
+- added LOOKUP_FRAME_CONTENT global property to ClientSettings class: it defines default lookup frame type for a lookup
+- added new lookup frames: filter panel + grid, custom panel + grid, tree + filter panel + grid, tree + custom panel + grid; these panes, showed above the grid,
+  allow to filter lookup grid and it is useful with large result sets.
+- available a CustomFilterPanel class, to use with "custom panel + grid" or "tree + custom panel + grid" windows, that customize the panel to show above the grid
+Changed "demo10" sample application to show how to use filter panel above the lookup grid and a custom filter panel above the grid (see lookups within employee detail frame).
+Fixed a problem on closing internal frame with AskBeforeClose flag activated.
+Fixed a problem in tips of day panel when scrolling tips.
+Fixed a problem when exporting data in xls/html formats: now text's column headers supports unicode characters.
+Added addItemListener method to (check-box) TreePanel to listen for check-box selection events.
+Fixed problem in TreePanel on rendering long node descriptions.
+Improved "demo36" sample application to show how to use Cayenne ORM relations with OpenSwing lookups.
+Changed LoginDialog constructor: now it is possible to store/retrieve account credentials in local machine, to the purpose of avoiding to provide account info, using a "store account" check-box.
+Changed build.xml file to build core classes of OpenSwing using Ant, now located in root dir of SVN repository/zip distribution.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions. 
+
+
+
+Release Notes 1.5.6
+-------------------
+
+Final release 1.5.6 available
+Added support for Apache Cayenne ORM. Added "demo36" sample application to show how to use Cayenne and OpenSwing together.
+Improved date control/column by supporting language expressed as "xx_YY".
+Added to ClientSettings a new global property: BUTTON_BEHAVIOR, to define whether showing image and/or text in default buttons (insert, edit, ...).
+Fixed a problem in quick filter panel when applying a filter that returns zero rows: now it is possible to reopen quick filter with CTRL+Q shortcut too.
+Fixed a problem in Form panel when using inner v.o. and the main v.o. is created in insert mode.
+Improved value object usage: now Short type and primitives types are supported as attribute type.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions. 
+
+
+
+Release Notes 1.5.5
+-------------------
+
+Final release 1.5.5 available
+Fixed a problem in several input controls when focus is set on them and save button is pressed: now background color is correctly changed for them.
+Fixed a problem in TreePanel having checkboxes for each node: when focus is resetted to that panel checkbox selections were lost, now this bug has been fixed.
+Improved button type column of GridControl when button is enabled in readonly mode too: now row selection is automatically setted when button has been pressed.
+Improved quick filter panel on grid:
+- added GridController.getInitialQuickFilterValue callback method to replace initial value to propose within the quick filter panel
+- added GridController.beforeFilterGrid callback method to replace filtering condition after pressing filter button
+- now if filtering condition leads to zero rows in grid then filter panel remains open to allow to clear filtering condition
+- now initial value in quick filter panel is setted also for domain type columns
+- filter panel now has the same background color of popup menu container
+- added global property LIKE to ClientSettings to define the SQL like operator; 
+  for instance it can be replaced by "ilike" case insensitive operator for PosgreSQL database
+- added shortcut key to "remove filter" menu item; default value: CTRL+R; customizable via ClientSettings.REMOVE_FILTER_KEY global property
+Improved filter panel on grid:
+- new callback method GridController.beforeFilterGrid can be used both on quick filter and filter panel
+- added IN operator: by pressing TAB key in filter field a new filter field is created next to it; 
+  this is useful to filter for multiple values
+- for operators different from IN,IS NULL,IS NOT NULL: by pressing TAB key in filter field a new filter field is created next to it;
+  this is useful to filter for multiple values using the same operator and with OR logical connector
+- updated grid profile management, according to IN and OR features
+Improved server-side utility classes QueryUtil,HibernateUtils,JPAUtils:
+now filtering/sorting conditions can be applied to a query defined with distinct statements (select, from, where, group by, having, order by).
+This feature can be useful for complex queries (e.g. nested selects, union).
+Added "anchorLastColumn" property to LookupControl, to anchor the last column to the right side of the lookup grid.
+Changed "demo17" sample application (based on Hibernate), by including a grid+detail functionality.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions. 
+
+
+
+Release Notes 1.5.4
+-------------------
+
+Final release 1.5.4 available
+Improved lookup component: 
+- now ESCAPE key can be used to close lookup window
+- added setMaxSortedColumns to set maximum number of sorted columns in lookup grid window
+Improved InternalFrame by implementing "askBeforeClose" property, used to show a confirm window when closing the frame.
+Added ASK_BEFORE_CLOSE property in ClientSettings to define the default value of "askBeforeClose" property in InternalFrame.
+Added some properties in ClientSettings to customize LoginDialog buttons and title.
+Added some properties in ClientSettings to customize TreeMenu title and search panel.
+Reduced GridControl focus border to 1 pixel.
+Fixed problem in GridControl when selecting a row, two row selection events were fired.
+Improved tree menu panel in MDI frame: now find function feature automatically scrolls the tree until showing the found node.
+Improved menu bar of MDI frame: now a mnemonic char is automatically set for all menu items too.
+Improved TreePanel search utility: 
+- now found node is automatically scrolled to the visible area
+- now shortcut key (F3) used to set focus on the tree search field is customizable, through ClientSettings.TREE_MENU_KEY property
+Improved desktop pane usage of MDI frame: 
+- now background image can be centered/repeated/streched, by means of ClientSettings.BACK_IMAGE_DISPOSITION property
+- background image defined in ClientSettings.BACKGROUND property can be set to null too
+- ClientSettings.BACKGROUND_PAINTER property can be used to do arbitrary backgrounds, by defining a BackgroundPainer interface
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions. 
+
+
+
+Release Notes 1.5.3
+-------------------
+
+Final release 1.5.3 available
+Cleanup the OpenSwing source code, by removing unused imports and not referred attributes/variabled.
+Improved QueryUtils and grid/form models by supporting primitive types (int, long, float, double) for attributes within a value object.
+Fixed focus problem on lookup type columns when closing the lookup grid frame: now focus is resetted in the edited cell.
+Added get/setProgressBarValue() methods to MDIFrame to directly set current value in progress bar, instead of using MDIFrame.setBusy() method.
+Added getStatusBar() method to MDIFrame to directly manage StatusBar object, instead of using MDIFrame.addStatusComponent() method.
+Changed EnglishOnlyResourceFactory behavior: now translations passed to the class constructor have priority on default translations internally defined (on EnglishOnlyResourceFactory).
+Changed applyFiltersAndSorter method in HibernateUtils utility class, to include id in filtered columns.
+Changed jcalendar.jar file.
+Improved date component: now date can be selected in calendar using F2 shortcut key and using up/down/left/right/tab/space keys.
+Improved ClientSettings class, by adding switchers to define shortcut keys:
+- to use within date and lookup components
+- to use within a Form panel or GridControl for all buttons linked to them 
+Fixed a bug in Form panel and GridControl when pressing CTRL+S to save form content.
+Fixed a bug in PasswordControl.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions. 
+
+
+
+Release Notes 1.5.2
+-------------------
+
+Final release 1.5.2 available
+
+Included support for Hessian serialization/deserialization: thanks to this open source library, it will be possible to combine
+different versions of java for client and server sides for the application. 
+Hessian usage is described in documentation available in "Messages" and "Business logic and data access tier development" and
+"Spring integration" sections of OpenSwing web site. Spring intergration section reported Hessian usage too.
+Changed "demo5" sample application to show how to use Hessian support in a 3 tier client-server application fully based on OpenSwing.
+Changed "demo18" sample application to show how to use Hessian support in a 3 tier client-server application based on OpenSwing and Spring.
+Created class OpenSwingTreeNode that inherits from DefaultMutableTreeNode; this subclass allows to serialize the "userObject" attribute 
+of DefaultMutableTreeNode: in this way "userObject" attribute can be correctly serialized using different versions of Java between client and server, hence with Hessian too.
+Changed behavior in GridControl component when right clicking with the mouse: now it is possible to execute some popup command on multiple selected rows.
+Fixed bugs in demo6, demo7 and demo9 sample applications.
+Added .bat/.sh start files for sample applications demo27..demo35 (see README.txt file for demo35).
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions. 
+
+
+
+Release Notes 1.5.1
+-------------------
+
+Final release 1.5.1 available
+
+Included support for JPA/EJB 3.0/TopLink Essentials: JPAUtils class has been provided to easily support grid pagination, filtering, sorting 
+from OpenSwing GridControl to JPA API.
+Added "demo35" sample application to show how to combine JPA with OpenSwing.
+Updated web site documentation by adding description about how to use together JPA and OpenSwing.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions. 
+
+
+
+Release Notes 1.5
+-----------------
+
+Final release 1.5 available
+
+Fixed a problem related to rendering TreePanel when check-boxes are showed.
+Fixed a bug on TreePanel when check-boxes are showed and user clicks with the right mouse button.
+Fixed bug in CheckBoxControl having three states when clicking with mouse and the control is disabled.
+Added "SHOW_PADLOCK_IN_TREE_MENU" property to ClientSettings to show/hide the padlock within the tree menu panel.
+Changed gif images with png images in BeanInfo.jar file to improve icons viewing in Eclipse components palette.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions. 
+
+
+
+Release Notes 1.4.9
+-------------------
+
+Final release 1.4.9 available
+
+Added new property in ClientSettings: FILTER_PANEL_ON_GRID_POLICY; this property is used as default value in "filterPanelOnGridPolicy" new property of GridControl:
+it allows to define filter panel policy for hiding it: automatically close filter panel when mouse exits from it, close it when pressing a close button, close it through a padlock button.
+Added new property "anchorLastColumn" to GridControl, to anchor the last column to the right margin of the grid.
+Added "setColumnTextAlignment" method to LookupController, to define text alignement in columns. 
+Added grid exporting feature when combining OpenSwing to Spring framework.
+Fixed a problem related to rendering GanttControl in NetBeans UI designer.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions. 
+
+
+
+Release Notes 1.4.8
+-------------------
+
+Final release 1.4.8 available
+
+Added new property to ListControl in order to provide a "check-box list": 
+"showCheckBoxes" property allows to show a check-box for each item to select.
+Added "NoLogger" class to avoid to log any message.
+Fixed problem in windows bar on the bottom of MDIFrame, where window's name was not correct with more than one window having the same name.
+Added "hideTitleBar" property to InternalFrame, in order to hide the title bar in an internal frame.
+Added "demo34" sample application to show how to use new "hideTitleBar" property.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions. 
+
+
+
+Release Notes 1.4.7
+-------------------
+
+Final release 1.4.7 available
+
+Improved MDIFrame by adding two methods:
+- addStatusComponent(String name,JComponent c), adds a component to the status panel and identify it by the specified name
+- getStatusComponent(String name), returns the component previously added to the status panel by identifing it by the specified name
+Improved TreePanel and GridControl by showing a smarter drag icon when dragging objects.
+Added some new properties and utility methods to TreePanel in order to provide a "check-box tree":
+- "showCheckBoxes" property to show a check-box for each node to select
+- "showCheckBoxesOnLeaves" property to hide/show a check-box also for leaf nodes.
+- "getCheckedNodes()" and "setCheckedNodes(HashSet checkedNodes)" to retrieve current selected check-boxes in tree and to select check-boxes associated to node in tree.
+- "getCheckedLeaves()" to retrieve current leaves having their check-boxes selected.
+Improved check-box control and check-box column by adding a third optional state: null, that can be activated through new property "allowNullValue", 
+i.e. now a check box can be selected, deselected and set to null.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions. 
+
+
+
+Release Notes 1.4.6
+-------------------
+
+Final release 1.4.6 available
+
+Added some utility methods to TreePanel:
+- expandAllNodes() and collapseAllNodes() to expand/collapse all tree nodes
+- get/setSelectionMode(int mode), to set the selection model (which must be single/contiguous/discontiguous)
+- get/setRowHeight(int rowHeight), to sets the height of each cell, in pixels
+- get/setShowsRootHandles(boolean showsRootHandles), to specify whether the node handles should be displayed
+- scrollRowToVisible(int row), to scroll the item identified by row until it is displayed
+- scrollPathToVisible(TreePath path), to sure all the path components in path are expanded (except for the last path component) and scrolls so that the node identified by the path is displayed
+- setSelectionRow(int row), to select the node at the specified row in the display
+- get/setSelectionRows(int[] rows), to selects the nodes corresponding to each of the specified rows in the display
+- get/setSelectionPath(TreePath path), to select the node identified by the specified path
+- get/setSelectionPaths(TreePath[] paths), to select the nodes identified by the specified array of paths
+- get/selectionBackground(Color color), to set tree selection background color
+- get/selectionForeground(Color color), to set tree selection foreground color
+- addPopupSeparator(), to add a separator to the popup menu
+- setMenuItemVisible(String menuName,boolean visible), used to show/hide a menu item in the popup
+- revalidateTree(), to update tree content, useful after deleting/renaming operations on nodes
+- addKeyListener/removeKeyListener(KeyListener listener), to add/remove key listeners to the tree
+- addMouseListener/removeMouseListener(MouseListener listener), to add/remove mouse listeners to the tree
+Updated "demo12" and "demo31" to show new features.
+Added new properties to ClientSettings class: TREE_SELECTION_BACKGROUND and TREE_SELECTION_FOREGROUND to set background and foreground colors for node selections in TreePanel.
+Fixed scrolling problem when dragging nodes in TreePanel.
+Fixed problem with check-box columns in grid: now when selecting check-box with mouse or space key, the value object attribute is automatically updated, without having to lost focus on the cell. 
+Moreover, ItemListener events are correctly fired. 
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions. 
+
+
+
+Release Notes 1.4.5
+-------------------
+
+Final release 1.4.5 available
+
+Changed ButtonColumn behavior when customizing background color with GridController.getBackgroundColor method:
+now background color is set on the button both in read only mode and in insert/edit modes, also with ButtonColumn.setEnableInReadOnlyMode(true).
+Added some utility methods to MDIFrame:
+- getMenuFile(): a hook to "File" JMenu object
+- getMenuItem(String functionId): a hook to a JMenuItem object added to menubar
+Improved MDIFrame by adding toolbar support; added some utility methods related to toolbar:
+- addButtonToToolBar(JButton button): appends a toolbar button
+- addSeparatorToToolBar(): appends a toolbar separator
+- addSeparatorToToolBar(Dimension dim): appends a toolbar separator of a specified size
+- setBorderPainterOnToolBar(boolean borderPainted): define if a border should be painted around the toolbar
+- setFloatableOnToolBar(boolean floatable): define if a floatable toolbar can be dragged into a different position within the same container or out into its own window
+- setOrientationOnToolBar(int orientation): define the toolbar orientation (vertical or horizontal)
+- setRolloverOnToolBar(boolean rollover): define if the border of the toolbar buttons will be drawn only when the mouse pointer hovers over them
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions. 
+
+
+
+Release Notes 1.4.4
+-------------------
+
+Final release 1.4.4 available
+
+Improved AboutDialog by supporting HTML based text. 
+Changed "demo" sample application by defining an about dialog content based on HTML format.
+Fixed bug in filtering/sorting panel of grid control: now in sorting folder there are "maxSortedColumns" combos to sort grid.
+Fixed bug in filtering/sorting panel of grid control: now in filtering folder "like" operator is applyable only to text based columns.
+Fixed bug in filtering/sorting panel of grid control: now in filtering folder when selecting "in (not) null" operator for combo type columns will disable filtering value field.
+Fixed problem with check-box column and button column: now these cell editors listen click events at the first click.
+Changed lock button in tree menu of MDI frame: now it has not any border.
+Updated web site by adding description about new features.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions. 
+
+
+
+Release Notes 1.4.3
+-------------------
+
+Final release 1.4.3 available
+
+Fixed problem on sorting grid content when there are the number of currently sorted columns is exactly equals to the maximum number of sorted columns.
+Added LinkButton component, used to show a link with an ActionListener binded.
+Added setImage(Image image) method to ImagePanel.
+Change ClientUtils.getImage() method by allowing tif format reading when used in combination with JAI Sun library.
+Added support for tif image format to TreePanel/ImagePanel/ClientUtils.getImage(), when combined with JAI Sun library.
+Added support for tif/ico image format to TreePanel/ImagePanel/ClientUtils.getImage(), when combined with JIMI Sun library.
+Updated web site by adding description about new features.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions. 
+
+
+
+Release Notes 1.4.2
+-------------------
+
+Final release 1.4.2 available
+
+Added an iconifable window (IconifableWindow class) that can contains any type of graphics component. 
+Moreover, a set of iconifable windows can be grouped together to realize an "Outlook like" set of panes through IconifableWindowContainer class.
+Added "demo32" sample application to show how to use a set of iconifable windows can be grouped together.
+Improved TreePanel: now tree automatically scrolls when dragging nodes inside it.
+Added "getMenuHelp" method to MDIFrame class; this getter allows to define additional menu items to "Help" menu of the MDIFrame menubar.
+Fixed problem on sorting grid content when there are the number of currently sorted columns is exactly equals to the maximum number of sorted columns.
+Updated web site by adding description about new features.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions. 
+
+
+
+Release Notes 1.4.1
+-------------------
+
+Final release 1.4.1 available
+
+Added multi-line label control.
+Added alert window.
+Added new property "foreignKeyAttributeName" to ComboBoxVoControl and ListVOControl, to the purpose of distinguish between
+the name of the attribute in the combo/list v.o. and in the container v.o. 
+Updated "demo26" sample application, to show how to use "foreignKeyAttributeName" property.
+Updated web site by adding description about new features.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions. 
+
+
+
+Release Notes 1.4
+-----------------
+
+Final release 1.4 available
+
+Changed RadioButtonControl: now setButtonGroup method is only required to bind a radio control to its button group; no buttonGroup.add(button) is still required.
+Improved list control, combo control, grid control and tree panel by adding a search mechanism: 
+now user can simply type in any string he want to search for and this pattern will be automatically found; * and ? special symbols are supported too.
+Improved lookup control by supporting multiple codes in validation task: now it is possible to return a list of value object as validation code response,
+in this case a lookup grid window will be showed to select a specific code from the list of same codes.
+Updated web site by adding description about new features.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions. 
+
+
+
+Release Notes 1.3.9
+-------------------
+
+Final release 1.3.9 available
+
+Fixed a bug in grid control when columns were sorted internally ("orderWithLoadData" property set to "false") and some cell contained null value.
+Improved TreePanel by adding new property: "iconImageName", that allows to specify distinct icons for each tree node.
+Improved TreePanel by adding new property: "tooltipAttributeName", that allows to specify distinct tooltip text for each tree node.
+Added demo31 sample application to show how to use new properties "iconImageName" and "tooltipAttributeName" in a TreePanel.
+Removed line border form button type columns in grid.
+Fixed repaint issue in grid when vertically scrolling it with mouse wheel.
+Fixed problem with radio button controls on loading data.
+Updated web site by adding description about new features.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions. 
+
+
+
+Release Notes 1.3.8
+-------------------
+
+Final release 1.3.8 available
+
+Improved lookup management: now it is possible to define what a lookup has to do when validating an incorrect code:
+clear code inside the code field (default value), restore the last valid code, mantain the invalid code in the code field and restore focus into it.
+This lookup behaviour can be defined through the new property "onInvalidCode" of LookupController class.
+Added ON_INVALID_CODE attribute in ClientSettings class: this property defines the default lookup behavior when validating an incorrect code.
+Updated web site by adding description about new features.
+Changed demo4 and demo24 sample applications to show how to use "onInvalidCode" property of LookupController class.
+Changed setValue/getValue methods of a VOListControl to support a list of value objects as argument, when this input control is added (and not linked) to a Form.
+Added demo30 sample application to show how to use a VOListControl for multiple selection inside a Form panel.
+Removed tooltip text from all xxxButtons and moved it to binding between button and grid.
+Fixed a problem in Form panel when its value object has an attribute having name "xXxxx".
+Improved Form panel and GridControl to support v.o. attributes having name "xXXX" or "Xxxx".
+Fixed a bug in row selection on grid arised when "enableInReadOnlyMode" property is set to "true".
+Fixed a problem when showing lookup grid frame: now the black border around the grid does not overrride the grid content.
+Fixed a background painting problem in DateControl and FormattedTextControl when disabling control.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions. 
+
+
+
+Release Notes 1.3.7
+-------------------
+
+Final release 1.3.7 available
+
+Improved ButtonColumn having "enableInReadOnlyMode" property set to "true": now button editability when grid is in read only mode 
+is defined through GridController.isCellEditable method.
+Added demo29 sample application that shows how to create a frame that contains both a grid and a Form panel linked together:
+employees frame contains a master-detail-detail panels: employees grid + employee detail + employee working hours grid
+Fixed a problem on setting focus inside a frame that contains a grid control and a Form too.
+Changed "pub/build.xml" file: now all jar files do not contain any certificate.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions. 
+
+
+
+Release Notes 1.3.6
+-------------------
+
+Final release 1.3.6 available
+
+Fixed problem when rendering root empty node in tree lookup.
+Improved grid cell editors: now they listen the first key pressed when the current cell is just selected but not yet in edit.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions. 
+
+
+
+Release Notes 1.3.5
+-------------------
+
+Final release 1.3.5 available
+
+Improved Column base class: now it is possible to create other column types from this base class.
+Improved ButtonColumn, by adding two new properties: "icon" and "iconName" to show an icon inside the button.
+Fixed problem in rendering input fields inside the LoginDialog.
+Fixed problem on validating input controls added to linked Forms.
+Added ClientSettings.SHOW_FOCUS_BORDER_ON_FORM switcher to hide focus border around the Form panel.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions. 
+
+
+
+Release Notes 1.3.4
+-------------------
+
+Final release 1.3.4 available
+
+Fixed problem when showing a grid control: now focus is correctly setted inside it.
+Fixed problem in bean info definition of GridControl class.
+Added OpenSwing installation instructions when using Eclipse combined with Jigloo plugin.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions. 
+
+
+
+Release Notes 1.3.3
+-------------------
+
+Final release 1.3.3 available
+
+Added new property "enableOnReadOnlyMode" to button column and check-box column: this property allows to
+click on buttons and check-boxes in grid also in read only mode, without have to switch grid to insert/edit mode.
+Changed "demo9" sample app to show how use this new property. 
+Improved grid profile management by adding a new implementation based on database: now grid profiles can be stored
+within database tables, by means of the class DbGridProfileManager. This implementation can be used for stand-alone applications.
+Added "demo28" sample app to show how use grid profile management based on database tables. 
+Updated web site by adding description about new features.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions. 
+
+
+
+Release Notes 1.3.2
+-------------------
+
+Final release 1.3.2 available
+
+Added grid profile persistent storage: this feature allows to automatically store grid "state" in terms of current columns visibility state, 
+columns position, columns width, columns sorting and columns filtering. All these properties can be stored for instance per user. 
+More grid profiles can be mantain for each grid and user can easily access to these profiles through right mouse click on the grid. 
+Changed "demo10" sample app to show how grid profile operates. 
+Updated web site by adding description about grid profile management.
+Improved grid: when losting focus on a cell in the grid, if the cell value is invalid then the focus will be set to the invalid grid again.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions. 
+
+
+
+Release Notes 1.3.1
+-------------------
+
+Final release 1.3.1 available
+
+Added a new list control that manages a list of value objects, shows a list of attributes as items and, 
+as for lookup, is able to link list's v.o. attributes to container's v.o. attributes.
+Changed "demo26" sample app to show how to use this component.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+
+Release Notes 1.3
+-----------------
+
+Final release 1.3 available
+
+Fixed initialization problem, arised in the last version of OpenSwing, with DateTimeColumn and TimeColumn.
+Fixed problem arised in the last version of OpenSwing, with default date and time formats in DateColumn, DateTimeColumn and TimeColumn.
+Fixed problem arised in the last version of OpenSwing, on selecting a row in the grid.
+Added setSelectedNode method to TreePanel component, used to select a specified node in the tree.
+Changed setValueObject method of VOModel class, to allow subclasses of the ValueObject to be used as a value, 
+which in turn would allow Hibernate CLIB proxies to function properly in OpenSwing.
+Added a new combo box control and a new combo box column that manages a list of value objects, shows a list of attributes as items and, 
+as for lookup, is able to link combo's v.o. attributes to container's v.o. attributes.
+Added "demo26" and "demo27" sample apps to show how to use these two components.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+
+Release Notes 1.2.9
+-------------------
+
+Final release 1.2.9 available
+
+Added a progress bar control and a progress bar column. 
+Added "demo25" sample app to show how to use these new components.
+Added several properties to DateColumn, DateTimeColumn and TimeColumn, so that it is possible to set date format and other aspects of that columns. 
+Fixed a problem on selecting the (already) selected date in the calendar.
+Fixed problem in grid control when selecting a row with the mouse after scrolling grid using the vertical scrollbar.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+
+Release Notes 1.2.8
+-------------------
+
+Final release 1.2.8 available
+
+Added "validateControl" method in FormController to validate input control editing: by means of this method it is possible
+to undo input control value when the focus is being lost form the input control.
+Changed "demo4" sample to show how to use validateControl method.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+
+Release Notes 1.2.7
+-------------------
+
+Final release 1.2.7 available
+
+Fixed problem with attribute editor in grid/form components: sometimes it falls in infinite recursion on ValueObject classes having 
+references to each other in a complex ways.
+Changed jnlp start file for "demo10" sample: now it can be launched for java 1.4 version of more.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+
+Release Notes 1.2.6
+-------------------
+
+Final release 1.2.6 available
+
+Added "colorsInReadOnlyMode" property to GridControl, to allow cells coloring in insert/edit mode too.
+Added "mergeCells" method to GridControl, used to merge an interval of cells (both on contiguos rows and columns).
+Added "demo24" sample app, to show cells coloring in all grid modes and to show cells span.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+
+Release Notes 1.2.5
+-------------------
+
+Final release 1.2.5 available
+
+Added MultiLineTextColumn to GridControl. 
+Changed "demo3" sample app, to show new MultiLineTextColumn column usage.
+Added MultipleTypeColumn to GridControl, i.e. a column to show different data types insde the same column.
+Added "demo23" sample app, to show how to use the MultipleTypeColumn.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+
+Release Notes 1.2.4
+-------------------
+
+Final release 1.2.4 available
+
+Fixed problem on Form panel when using copy button.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+
+Release Notes 1.2.3
+-------------------
+
+Final release 1.2.3 available
+
+Added PasswordControl component.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+
+Release Notes 1.2.2
+-------------------
+
+Final release 1.2.2 available
+
+Added PropertyGridControl component: it can be used to edit properties, having different value types in a grid (see documentation for detailed info).
+Added "demo21" and "demo22" sample applications showing how to use the new PropertyGridControl class.
+Fixed problem when referring inner v.o. attribute in a grid or Form components.
+Fixed problem when referring the whole lookup v.o. to an attribute in the lookup container.
+Added "addLookup2ParentLink" method to LookupController, to set the whole lookup v.o. to an attribute in the lookup container.
+Added "createInnerVO" property to GridControl to define if an inner v.o. must be automatically instantiated when a setter method is invoked.
+Fixed a problem in NumericControl: now "minValue" property in NumericControl and in "numeric" columns 
+correctly support negative numbers, i.e. if this property has a negative value, then the user can digit a negative number 
+in the numeric component, by pressing "-" symbol as the first character at the left of the number.
+Fixed problem with ListControl when there is the same item description for more than one item.
+Fixed problem in Form when binding an inner value object to more than one input controls.
+Added new target "beaninfosign" to build.xml Ant file: it can be used to sign BeanInfo.jar file too.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+
+Release Notes 1.2.1
+-------------------
+
+Final release 1.2.1 available
+
+Added "textAlignment" property to LabelControl.
+Set a minimum size to input controls, to avoid their zero width when reducing the frame dimension.
+Improved usage of Eclipse's Window Builder plugin: now v.o. attribute selection is correctly viewed in the combo selector, 
+according to input control type.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+Release Notes 1.2
+-------------------
+
+Final release 1.2 available
+
+Improved data model for GridControl and Form: now in a value object are supported also getter/setter methods related to inner value objects.
+Improved QueryUtil.getQuery method by supporting attribute filling per inner value objects too.
+Fixed bug arised in an editable grid when the focus is inside a cell and the user clicks in another cell.
+Improved GridControl by adding CTRL+Q keys combination to open quick filter panel. ESC button allows to close it. It is possible to press ENTER key to apply the filter value inside the filter.
+Improved GridControl by adding two new column properties: "additionalHeaderColumnName" and "additionalHeaderColumnSpan", used to add an additional column header panel above the default one.
+Added demo20 to show how to use the additional column headers on the top of the GridControl.
+Improved ListControl by supporting a java.util.List of objects as attribute value, so that it is possible to use the ListControl in a FormPanel this multiple selected items.
+Added "textAlignment" property to input controls to define horizontal alignment.
+Added two new methods in GridController: getHeaderTooltip and getCellTooltip to set a tooltip text to the column headers and to each cell of the GridControl.
+Changed demo4 sample to show how to use the ListControl and new methods added in this release.
+Fixed problem on setting attribute name in a Form using the UI designer.
+Changed pub/build.xml file.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+Release Notes 1.1.9
+-------------------
+
+Final release 1.1.9 available
+
+Added new input control: ListControl.
+Added add(Component comp) method to GridControl to support Eclipse's Window Builder plugin.
+Fixed bug when showing/hiding columns on grid by clicking in a locked column.
+Fixed bugs related to scrolling grid using vertical scrollbar and using page up/down keys.
+Added pub/build.xml file to build clientos.jar, serveros.jar and other distribution files using Ant.
+Fixed problem with button's grid when setting MetalLookAndFeel with java 1.5 or 1.6
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+Release Notes 1.1.8
+-------------------
+
+Final release 1.1.8 available
+
+Added setLocked method to MDIFrame, to disable tree panel locking on the MDI frame.
+Fixed problem when using ClientSettings.MENU_WIDTH property.
+Fixed problem in grid, related to the sorting order of columns, when more than one columns has been sorted.
+Added ClientSettings.SHOW_SORTING_ORDER property to show the sorting order in the column header of a grid and
+when clicking many times on column headers to re-sort them.
+Added ClientSettings.HEADER_FONT property to change column header font for all grids.
+Added two properties in all columns, to manage Font and Color in column headers: "headerFont" and "headerForegroundColor".
+Added two properties in GridControl to manage cell/row margins: "intercellSpacing" and "rowMargin".
+Added two equivalent properties in ClientSettings: INTERCELL_SPACING and ROW_MARGIN.
+Added "textAlignment" property to all columns, to set horizontal alignement of cell content.
+Fixed problem in grid's filter panel when applying a filter to a combo column and with numeric type columns.
+Fixed problem when invoking GridController.selectedCell: the selected row index was incorrect.
+Fixed problem with GridController.validateCell method when editing numeric type cells.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+Release Notes 1.1.7
+-------------------
+
+Final release 1.1.7 available
+
+Added new input control: FormattedTextControl, based on JFormattedTextField class.
+Added new grid column: FormattedTextColumn, based on JFormattedTextField class.
+Added "toolTipText" property to graphics controls. This text is automatically converted according to internationalization settings.
+Fixed some problems with multiple rows selection on grid, with page scrolling on grid and selecting row on grid using navigator bar in a Form.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+Release Notes 1.1.6
+-------------------
+
+Final release 1.1.6 available
+
+Fixed problems while using grid to Form linking feature: now it works fine when using mouse, up/key keys and navitator bar buttons.
+Improved Form.linkGrid() method by providing additional flags to control Form data loading when using left mouse button and up/down keys.
+Add set/getFont methods to LabelControl and all input controls.
+Changed sample18 by showing login error message when login is failed.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+
+Release Notes 1.1.5
+-------------------
+
+Final release 1.1.5 available
+
+Improved navigator bar by adding two new buttons: "previous page" and "next page" to scroll data on grid per page.
+Added ClientSettings.SHOW_PAGINATION_BUTTONS_ON_NAVBAR flag to show/hide pagination buttons in navigator bar.
+Improved vertical scrollbar of the grid by adding two new buttons: "previous page" and "next page" to scroll data on grid per page.
+Added ClientSettings.SHOW_PAGINATION_BUTTONS_ON_GRID flag to show/hide pagination buttons in the vertical scrollbar of the grid.
+Added setRowSelectionInterval method to grid control to select an interval of rows on grid.
+Added a link mechanism between a grid and a Form panel: now it is possible to navigate through the grid and automatically show in the Form 
+the current selected row in grid. It is possible to link a navigator bar directly to the Form too.
+Moreover, a new row added through a Form will be automatically showed in the grid (if the link mechanism has been activated); idem for changed row and deleted row (in Form).
+Demo4 was changed to show how to link a Form to its parent grid control (see demo4.DetailFrame class).
+Added editCellAt method to grid control, to set editing in the specified cell.
+Improved demo19 by changing Emp.xml file: now it supports "is null" and "is not null" criteria.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+
+Release Notes 1.1.4
+-------------------
+
+Final release 1.1.4 available
+
+Added getFont method to GridController to set font for each cell.
+Changed demo3 sample to show how to use this new feature.
+Fixed bug in text control and text columns: text was always in uppercase.
+Fixed exceptions fired in grid control.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+
+Release Notes 1.1.3
+-------------------
+
+Final release 1.1.3 available
+
+Improved grid control: now it is possible to lock (anchor) rows at the top and/or at the bottom of the grid,
+e.g. to show grid totals. Updated GUI documentation in the web site.
+Changed export algorithms by supporting top/bottom locked rows exporting.
+Changed demo3 sample to show how to use row locking. 
+Added "defaultQuickFilterCriteria" property to GridControl, used to set the default criteria (equals or contains or starts with or ends with)
+showed in the quick filter panel. Added DEFAULT_QUICK_FILTER_CRITERIA property to ClientSettings to define a default criteria for all grids.
+Fixed bug when scrolling rows in grid where data loading is based on pagination.
+Fixed bug in text control and text column when "uppercase" property is set to "true".
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+
+Release Notes 1.1.2
+-------------------
+
+Final release 1.1.2 available
+
+Fixed bug in quick filter on grid: filter criteria "starts with" and "ends with" were inverted.
+Added a filter panel to the grid: this optional panel will be showed when the mouse is moved at the right side of the grid
+and allows to define multiple filtering/sorting conditions.
+Added a new button: the filter button; this can be used in combination with the grid to show a filter dialog:
+this optional dialog will be showed when clicking on the filter button and allows to define multiple filtering/sorting conditions.
+Changed demo10 to show how to activate filter dialog.
+Added ClientSettings.FILTER_PANEL_ON_GRID constant to define if filter panel is enabled on grids as default setting.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+
+Release Notes 1.1.1
+-------------------
+
+Final release 1.1.1 available
+
+Fixed navigation problem in grid when pressing up key on the first row and there are more than BLOCK_SIZE rows.
+Changed sorting icons painted inside a sorted column, by changing sort up and sort down icons.
+Improved quick filter on grid: now it is available a list of filter criteria: equals, contains, starts with and ends with.
+Fixed problem on exporting data from grid with Unicode characters.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+
+Release Notes 1.1
+-------------------
+
+Final release 1.1 available
+
+Added a progress bar component, a progress bar panel and a progress bar dialog.
+Changed business logic in demo10 sample, by showing how to show ORM capabilities of QueryUtil utility class and 
+how applying filtering/sorting conditions provided by a grid. 
+Changed demo14 sample to show how using the new licence agreement panel and the new progress bar panel.
+Updated tutorial section of this web site, by showing more detailed instructions of development based on OpenSwing. 
+Fixed rendering problem in column header when filtering a column in grid that was previously dragged in another position.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+
+Release Notes 1.0.9
+-------------------
+
+Final release 1.0.9 available
+
+Fixed problem when binding a NumericControl to a non BigDecimal type attribute.
+Fixed problem when binding a CodLookupControl to a Form: now CodLookupControl is always linked to the Form, independetly from the setController() method invokation point.
+Improved quick filter on grid: now it supports check-box filtering columns too.
+Added a customizable tip of the day frame/internal frame. Demo10 shows an example of how using the 'tip of the day' window.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+
+Release Notes 1.0.8
+-------------------
+
+Final release 1.0.8 available
+
+Added a layer to embed Spring Framework as a server-side layer for OpenSwing applications.
+Added demo18 showing how to combine OpenSwing with Spring. Sample app has been tested with Spring 2.0.4 (not included in OpenSwing distribution). See "readme.txt" file in "classes/demo18" subfolder for more instructions.
+Added a layer to embed iBatis Data Mapper as a server-side layer for OpenSwing applications.
+Added demo19 showing how to combine OpenSwing with iBatis. Sample app has been tested with iBatis 2.3 (not included in OpenSwing distribution). 
+Demo19 also shows how to bind a composition of attributes to a column or a control, related to nested value objects.
+Improved attribute definition in grid columns and graphics controls: now it is possible to bind a column or a control to a composition of attributes, related to nested value objects.
+Fixed problem with text control and text column when "uppercase" property is set to "true": some not visible characters were erroneously added to the input field.
+
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+
+Release Notes 1.0.7
+-------------------
+
+Final release 1.0.7 available
+
+Changes to grid:
+- improved export algorithm from grid, by adding two new export formats: PDF and RTF
+- fixed problem on setting focus to quick filter, when used inside a JFrame (with no MDI environments)
+- added an image column for the grid control; it is based on byte[] data type.
+- added rowHeight property to grid control (useful to change default row height on grid having images).
+- added rowHeightFixed property to grid control (useful to automatically arrange row height for each row, on grid having images having different heights).
+- changed filter criteria when filtering date columns: now the date interval in in the format: dateField >= date1 and dateField < date2+1
+- added the "orderWithLoadData" property to grid control to allow column sorting of the whole just loaded result set, without reloading data from database.
+
+Added a new dialog window component: OptionPane; it is a wrapper of JOptionPane component: 
+it automatically translates title, description and buttons, according to current internationalization settings.
+Added an image panel and an image control. Image control can be linked to a Form object as any other input control. It is based on byte[] data type.
+Added a splash screen component. The "Demo" sample shows how to attach a splash screen to a JFrame.
+Added displayURL method to ClientUtils to show a local document with the default viewer (Acrobat, Excel, Browser, Note Pad, Word, etc.)
+
+Demos:
+- added demo15 showing how to use the new image control for Form panel
+- added demo16 showing how to use an image column for grid
+- changed demo4 GridFrameController class, to show how to use QueryUtil class in a 2 tier client-server application and how operates "orderWithLoadData" property
+- added demo17 showing how to combine OpenSwing with Hibernate. Sample app has been tested with Hibernate 3.2.3 (not included in OpenSwing distribution).
+
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+
+Release Notes 1.0.6
+-------------------
+
+Final release 1.0.6 available
+Fixed problem on opening an export document from a grid control, with no Windows O.S.
+Improved export algorithm from grid, by adding three new export formats: CSV (with ";" and "," separators), XML and HTML.
+Fixed problem with date calendar in grid: now date can be always changed.
+Add a new subpackage: org.openswing.swing.wizard.client: it contains a new graphics control, a wizard panel
+that can be used to assemble a set of panes to create a wizard feature.
+Added demo14 sample that shows how to use the new wizard panel.
+Improved grid showing: now key events onto grid buttons are listened also when grid is showed the first time.
+Added MouseListener to ApplicationEventQueue utility class.
+Added centerFrame method to ClientUtils class.
+
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+
+Release Notes 1.0.5
+-------------------
+
+Final release 1.0.5 available
+Fixed problems when closing all windows from window menu.
+Fixed problem on copying onto a Form object with v.o. having isXXX getter.
+Fixed problem with lookup grid frame that did not scroll after the first block of data.
+Added getQuickFilterValues method to GridControl.
+Added setFilterableColumn method to LookupController.
+Extended mechanism used to invoke a function in tree menu/menubar: now the ClientFacade method can has one of the following signature:
+- methodName()
+- methodName(String functionId)
+
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+
+Release Notes 1.0.4
+-------------------
+
+Final release 1.0.4 available
+This distribution has been tested on NetBeans 4.1 and JDeveloper 10.1.2 too. It has been added the demo13 application, created as a project inside NetBeans.
+It has been provided a beaninfo.jar library that can be included in the IDE to add OpenSwing components to the palette (for IDEs like JBuilder, NetBeans, JDeveloper).
+This distribution introduces a change in grid value object attributes recognition: now there are retrieved attributes having isXXX method too 
+and also attributes that have getter method and not setter method.
+Export dialog now shows the column headers and no more attribute names.
+Corrected problem when saving and deleting rows from grid: after that operation refresh did't operate correctly.
+Corrected problem when copying rows from grid: no new rows were recognized.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions (just updated).
+
+
+Release Notes 1.0.3
+-------------------
+
+Final release 1.0.3 available
+A new example is provided: a tree frame demo which shows how activate drag 'n drop onto trees.
+Tree panel section has been added to HTML documentation.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+Release Notes 1.0.2
+-------------------
+
+Final release 1.0.2 available
+A new example is provided. 
+A new Tree+Grid panel is available, similar to TreeTable component described in http://java.sun.com/products/jfc/tsc/articles/treetable1/
+but based on a TreeTableModel that contains value objects, so more easy to use.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+Release Notes 1.0.1
+-------------------
+
+Final release 1.0.1 available
+This distribution includes .bat/.sh files to start demos included with OpenSwing distribution.
+Examples are better described. A tutorial section has been included.
+The distribution includes also Jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
+
+
+Release Notes 1.0.0
+-------------------
+
+Final release 1.0 available
+The distribution includes jar file libraries, source files, javadoc, licence and readme.txt installation instructions.
