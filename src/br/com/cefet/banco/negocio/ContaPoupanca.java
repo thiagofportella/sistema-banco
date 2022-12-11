@@ -14,7 +14,7 @@ public class ContaPoupanca extends Conta {
 
 
 	public void imprimirResumo() {
-		System.err.println("---- Conta Poupança ----");
+		System.err.println("---- Conta PoupanÃ§a ----");
 		super.imprimirResumo();
 	}
 

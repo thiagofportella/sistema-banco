@@ -53,10 +53,10 @@ public abstract class Funcionario implements Autenticavel{
 	public void imprimirResumo(){
 		System.out.println("-----------------------");
 		System.out.println("Nome: "+this.nome);
-		System.out.println("Endereço: "+this.endereco);
+		System.out.println("Endereï¿½o: "+this.endereco);
 		System.out.println("CPF: "+this.cpf);
 		System.out.println("Departamento: "+this.departamento);
-		System.out.println("Salário: "+this.salario);
+		System.out.println("Salï¿½rio: "+this.salario);
 		System.out.println("Estado: "+this.estado.toString());
 	}
 	
@@ -144,7 +144,7 @@ public abstract class Funcionario implements Autenticavel{
 		} else if(cargo == 2) {
 			return "Diretor";
 		} else {
-			return "Cargo inválido";
+			return "Cargo invÃ¡lido";
 		}
 
 	}

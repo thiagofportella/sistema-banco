@@ -26,16 +26,16 @@ public class ClienteDAO {
 	}
 
 	public void adicionaCliente(Cliente c){
-		// Testando se preciso fabricar uma conexão
+		// Testando se preciso fabricar uma conexï¿½o
 		try{
 			if(conexao.isClosed()){
 				conexao = new ConnectionFactory().getConexao();
 			}
 		} catch (SQLException e){
-			System.out.println("Erro ao obter conexão. " + e.getMessage());
+			System.out.println("Erro ao obter conexï¿½o. " + e.getMessage());
 		}
 
-		// Declarar minha instrução sql
+		// Declarar minha instruï¿½ï¿½o sql
 		this.comandoSQL = "INSERT INTO cliente(nome,endereco, cpf, usuario, senha) VALUES (?,?,?,?,?)";
 
 		try {
@@ -54,7 +54,7 @@ public class ClienteDAO {
 				if (generatedKeys.next()) {
 				    c.setId(generatedKeys.getLong(1));
 				}else {
-				    throw new SQLException("Falha a inserção, nenhuma ID obtida.");
+				    throw new SQLException("Falha a inserï¿½ï¿½o, nenhuma ID obtida.");
 				}
 			}
 
@@ -69,20 +69,20 @@ public class ClienteDAO {
 				conexao.close();
 				System.out.println(conexao);
 			} catch (SQLException e) {
-				System.out.println("Não foi possível liberar os recursos. " + e.getMessage());
+				System.out.println("Nï¿½o foi possï¿½vel liberar os recursos. " + e.getMessage());
 			}
 		}
 	}
 
 
 	public List<Cliente> getListaClientes(){
-		// Testando se preciso fabricar uma conexão
+		// Testando se preciso fabricar uma conexï¿½o
 		try{
 			if(conexao.isClosed()){
 				conexao = new ConnectionFactory().getConexao();
 			}
 		} catch (SQLException e){
-			System.out.println("Erro ao obter conexão. " + e.getMessage());
+			System.out.println("Erro ao obter conexï¿½o. " + e.getMessage());
 		}
 
 		this.comandoSQL = "SELECT * FROM Cliente";
@@ -104,7 +104,7 @@ public class ClienteDAO {
 			}
 			return clientes;
 		} catch (SQLException e) {
-			System.out.println("Não foi possível listar. " + e.getMessage());
+			System.out.println("NÃ£o foi possÃ­vel listar. " + e.getMessage());
 			return null;
 		}finally {
 			// liberando os recursos
@@ -113,19 +113,19 @@ public class ClienteDAO {
 				conexao.close();
 				System.out.println(conexao);
 			} catch (SQLException e) {
-				System.out.println("Não foi possível liberar os recursos. " + e.getMessage());
+				System.out.println("NÃ£o foi possÃ­vel liberar os recursos. " + e.getMessage());
 			}
 		}
 	}
 	
 	public Cliente getCliente(long id){
-		// Testando se preciso fabricar uma conexão
+		// Testando se preciso fabricar uma conexÃ£o
 		try{
 			if(conexao.isClosed()){
 				conexao = new ConnectionFactory().getConexao();
 			}
 		} catch (SQLException e){
-			System.out.println("Erro ao obter conexão. " + e.getMessage());
+			System.out.println("Erro ao obter conexÃ£o. " + e.getMessage());
 		}
 
 		this.comandoSQL = "SELECT * FROM Cliente WHERE idCliente = ?";
@@ -148,7 +148,7 @@ public class ClienteDAO {
 			
 			return cliente;
 		} catch (SQLException e) {
-			System.out.println("Não foi possível listar. " + e.getMessage());
+			System.out.println("NÃ£o foi possÃ­vel listar. " + e.getMessage());
 			return null;
 		}finally {
 			// liberando os recursos
@@ -157,22 +157,22 @@ public class ClienteDAO {
 				conexao.close();
 				System.out.println(conexao);
 			} catch (SQLException e) {
-				System.out.println("Não foi possível liberar os recursos. " + e.getMessage());
+				System.out.println("NÃ£o foi possÃ­vel liberar os recursos. " + e.getMessage());
 			}
 		}
 	}
 	
 	public void altera(Cliente c){
-		// Testando se preciso fabricar uma conexão
+		// Testando se preciso fabricar uma conexï¿½o
 		try{
 			if(conexao.isClosed()){
 				conexao = new ConnectionFactory().getConexao();
 			}
 		} catch (SQLException e){
-			System.out.println("Erro ao obter conexão. " + e.getMessage());
+			System.out.println("Erro ao obter conexÃ£o. " + e.getMessage());
 		}
 
-		// Declarar minha instrução sql
+		// Declarar minha instruï¿½ï¿½o sql
 		this.comandoSQL = "UPDATE Cliente SET nome=?,endereco=?,cpf=?,usuario=?,senha=? WHERE idCliente=?";
 		try {
 			// Preparando a stmt
@@ -198,7 +198,7 @@ public class ClienteDAO {
 				conexao.close();
 				System.out.println(conexao);
 			} catch (SQLException e) {
-				System.out.println("Não foi possível liberar os recursos. " + e.getMessage());
+				System.out.println("NÃ£o foi possÃ­vel liberar os recursos. " + e.getMessage());
 			}
 		}
 	}
@@ -206,16 +206,16 @@ public class ClienteDAO {
 	
 	
 	public void remove(Cliente c){
-		// Testando se preciso fabricar uma conexão
+		// Testando se preciso fabricar uma conexÃ£o
 		try{
 			if(conexao.isClosed()){
 				conexao = new ConnectionFactory().getConexao();
 			}
 		} catch (SQLException e){
-			System.out.println("Erro ao obter conexão. " + e.getMessage());
+			System.out.println("Erro ao obter conexÃ£o. " + e.getMessage());
 		}
 
-		// Declarar minha instrução sql
+		// Declarar minha instruÃ§Ã£o sql
 		this.comandoSQL = "DELETE FROM Cliente WHERE idCliente=?";
 
 		try {
@@ -237,7 +237,7 @@ public class ClienteDAO {
 				conexao.close();
 				System.out.println(conexao);
 			} catch (SQLException e) {
-				System.out.println("Não foi possível liberar os recursos. " + e.getMessage());
+				System.out.println("NÃ£o foi possÃ­vel liberar os recursos. " + e.getMessage());
 			}
 		}
 	}
@@ -256,13 +256,13 @@ public class ClienteDAO {
 
 	
 	public Cliente getCliente(String usuario){
-		// Testando se preciso fabricar uma conexão
+		// Testando se preciso fabricar uma conexÃ£o
 		try{
 			if(conexao.isClosed()){
 				conexao = new ConnectionFactory().getConexao();
 			}
 		} catch (SQLException e){
-			System.out.println("Erro ao obter conexão. " + e.getMessage());
+			System.out.println("Erro ao obter conexÃ£o. " + e.getMessage());
 		}
 
 		this.comandoSQL = "SELECT * FROM Cliente WHERE usuario LIKE ?";
@@ -285,7 +285,7 @@ public class ClienteDAO {
 			
 			return cliente;
 		} catch (SQLException e) {
-			System.out.println("Não foi possível listar. " + e.getMessage());
+			System.out.println("NÃ£o foi possÃ­vel listar. " + e.getMessage());
 			return null;
 		}finally {
 			// liberando os recursos
@@ -294,7 +294,7 @@ public class ClienteDAO {
 				conexao.close();
 				System.out.println(conexao);
 			} catch (SQLException e) {
-				System.out.println("Não foi possível liberar os recursos. " + e.getMessage());
+				System.out.println("NÃ£o foi possÃ­vel liberar os recursos. " + e.getMessage());
 			}
 		}
 	}

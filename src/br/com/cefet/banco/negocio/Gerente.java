@@ -2,7 +2,7 @@ package br.com.cefet.banco.negocio;
 
 public class Gerente extends Funcionario {
 	
-	// atributos e métodos
+	// atributos e mÃ©todos
 	
 	private static int totalGerentes;
 	
