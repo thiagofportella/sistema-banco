@@ -1,9 +1,9 @@
 package br.com.cefet.banco.negocio;
 
 public enum EstadoFuncionario {
-	EM_EXERCICIO("Em exercício"),
-	EM_FERIAS("Em férias"),
-	AFASTADO_POR_DOENCA("Afastado por doença"),
+	EM_EXERCICIO("Em exercÃ­cio"),
+	EM_FERIAS("Em fÃ©rias"),
+	AFASTADO_POR_DOENCA("Afastado por doenÃ§a"),
 	APOSENTADO("Aposentado");
 	
 	private final String estado;
