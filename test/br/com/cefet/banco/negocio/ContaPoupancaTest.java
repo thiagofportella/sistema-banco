@@ -50,4 +50,13 @@ public class ContaPoupancaTest {
         cp.atualiza(100);
         assertEquals(900, cp.getSaldo(), 0.0);
     }
+
+    @Test
+    public void getTipoStr() {
+        Conta cp = new ContaPoupanca(0.0);
+        Cliente titular = new Cliente("nome", "cpf", "endereco", "usuario", "senha");
+        cp.setTitular(titular);
+
+        assertEquals("Conta poupança", cp.getTipoStr());
+    }
 }

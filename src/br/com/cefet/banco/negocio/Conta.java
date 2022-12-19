@@ -35,12 +35,14 @@ public abstract class Conta implements Comparable<Conta>{
 			if ((this.saldo + this.limite) >= valor) {
 				this.saldo -= valor;
 			} else {
-				throw new SaldoInsuficienteException("Saldo insuficiente. Você só pode sacar "+
+				throw new SaldoInsuficienteException("Saldo insuficiente. VocÃª sÃ³ pode sacar "+
 						this.getSaldo()+this.getLimite());
 			}
 	}
 
-	public void depositar(double valor)throws DepositoInvalidoException { double novoSaldo=this.saldo+=valor;
+	public void depositar(double valor) throws DepositoInvalidoException {
+		double novoSaldo = this.saldo+=valor;
+
 		if (valor >= 0) { 
 			this.saldo =novoSaldo;
 		}else{
@@ -127,7 +129,7 @@ public abstract class Conta implements Comparable<Conta>{
 		if(tipo==0) {
 			return "Conta corrente";
 		} else {
-			return "Conta poupança";
+			return "Conta poupanÃ§a";
 		}
 	}
 	

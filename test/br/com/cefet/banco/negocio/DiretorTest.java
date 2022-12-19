@@ -33,6 +33,11 @@ public class DiretorTest {
 
     @Test
     public void getBonificacao() {
+        Diretor diretor = new Diretor("Thiago", "Rua dos Alfeneiros", "cpf", "Direção",
+                "diretor", "diretor", 100.00);
+
+        double bonificacao = diretor.getBonificacao();
+        assertEquals(50.0, bonificacao, 0.0);
     }
 
     @Test

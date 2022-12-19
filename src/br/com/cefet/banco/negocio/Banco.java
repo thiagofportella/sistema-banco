@@ -95,7 +95,8 @@ public class Banco {
 		}
 	}
 
-	public double calcularLimiteMaximo(Conta conta, double saldo, double limite, double gastoTotalBanco,double saldoTotalBanco, int numeroClientes, int numeroFuncionarios) {
+	public double calcularLimiteMaximo(Conta conta, double saldo, double limite, double gastoTotalBanco,
+									   double saldoTotalBanco, int numeroClientes, int numeroFuncionarios) {
 		double limiteMaximo = 0;
 		if(saldo<0) {
 			limiteMaximo = limite;
