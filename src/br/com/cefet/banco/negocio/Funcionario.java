@@ -1,5 +1,8 @@
 package br.com.cefet.banco.negocio;
 
+import br.com.cefet.banco.exceptions.AutoPromocaoFuncionarioException;
+import br.com.cefet.banco.exceptions.PromocaoFuncionarioCargoInvalidoException;
+
 /**
  * @author marco
  *
@@ -53,10 +56,10 @@ public abstract class Funcionario implements Autenticavel{
 	public void imprimirResumo(){
 		System.out.println("-----------------------");
 		System.out.println("Nome: "+this.nome);
-		System.out.println("Endere�o: "+this.endereco);
+		System.out.println("Endereço: "+this.endereco);
 		System.out.println("CPF: "+this.cpf);
 		System.out.println("Departamento: "+this.departamento);
-		System.out.println("Sal�rio: "+this.salario);
+		System.out.println("Salário: "+this.salario);
 		System.out.println("Estado: "+this.estado.toString());
 	}
 	
@@ -165,6 +168,16 @@ public abstract class Funcionario implements Autenticavel{
 		return totalFuncionarios;
 	}
 
-	
-	
+	public void promoverFuncionario(Funcionario funcionario, int cargo) throws AutoPromocaoFuncionarioException, PromocaoFuncionarioCargoInvalidoException {
+		if (this.equals(funcionario)) {
+			throw new AutoPromocaoFuncionarioException("Funcionário não pode se autopromover!");
+		}
+
+		if (funcionario.getCargo() >= this.cargo) {
+			throw new PromocaoFuncionarioCargoInvalidoException("Cargo inválido!");
+		}
+
+		funcionario.setCargo(cargo);
+	}
+
 }
